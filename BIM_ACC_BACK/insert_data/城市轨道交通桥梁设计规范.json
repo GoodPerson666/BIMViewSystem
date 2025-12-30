@@ -1,0 +1,1015 @@
+{
+    "version": 1.0,
+    "data": [
+        {
+            "section": "1",
+            "section_contents": [
+                {
+                    "subsection": "1.0",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "1.0.1",
+                            "subsubsection_contents": "为使城市轨道交通桥梁工程设计符合安全可靠、适用耐久、技术先进、经济合理的要求，制定本规范。"
+                        },
+                        {
+                            "subsubsection": "1.0.2",
+                            "subsubsection_contents": "本规范适用于钢轮钢轨制式和跨座式单轨制式，最高运行速度不超过  $120\\mathrm{km / h}$  的城市轨道交通新建桥梁工程的设计。本规范适用的桥梁跨度为：\n\n梁式桥不大于  $150\\mathrm{m}$\n\n斜拉桥和拱桥不大于  $400\\mathrm{m}$\n\n结合梁不大于  $80\\mathrm{m}$"
+                        },
+                        {
+                            "subsubsection": "1.0.3",
+                            "subsubsection_contents": "桥梁主体结构设计使用年限应为100年。"
+                        },
+                        {
+                            "subsubsection": "1.0.4",
+                            "subsubsection_contents": "桥梁结构在制造、运输、安装和运营过程中应具有足够的强度、刚度、稳定性，并应满足使用耐久性要求。"
+                        },
+                        {
+                            "subsubsection": "1.0.5",
+                            "subsubsection_contents": "桥梁设计应预留设备的安装、检修和更换条件，并应满足养护、维修的要求。"
+                        },
+                        {
+                            "subsubsection": "1.0.6",
+                            "subsubsection_contents": "城市轨道交通桥梁设计应采用百年一遇的洪水频率，对特别重要的桥梁可提高到三百年一遇。"
+                        },
+                        {
+                            "subsubsection": "1.0.7",
+                            "subsubsection_contents": "城市轨道交通桥梁工程设计除应符合本规范外，尚应符合国家现行有关标准的规定。"
+                        }
+                    ],
+                    "subsection_name": "No_NAME"
+                }
+            ],
+            "section_name": "总 则"
+        },
+        {
+            "section": "2",
+            "section_contents": [
+                {
+                    "subsection": "2.0",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "2.0.1",
+                            "subsubsection_contents": "救援列车荷载 rescue train load\n\n运营列车发生故障时，进行救援产生的附加荷载。"
+                        },
+                        {
+                            "subsubsection": "2.0.2",
+                            "subsubsection_contents": "疲劳活载 fatigue load\n\n反复作用于结构并引起交变应力的活荷载。"
+                        },
+                        {
+                            "subsubsection": "2.0.3",
+                            "subsubsection_contents": "纵向水平力 longitudinal force due to continuous welded rail\n\n由桥梁和无缝线路间相对位移引起的水平力。"
+                        },
+                        {
+                            "subsubsection": "2.0.4",
+                            "subsubsection_contents": "断轨力 breaking force of continuous welded rail\n\n无缝线路钢轨突然折断引起桥梁与钢轨间相对位移产生的水平力。"
+                        },
+                        {
+                            "subsubsection": "2.0.5",
+                            "subsubsection_contents": "构件温差 temperature difference between different structural elements\n\n环境温度变化引起不同构件之间的温度差值。"
+                        },
+                        {
+                            "subsubsection": "2.0.6",
+                            "subsubsection_contents": "风-车-桥系统耦合振动分析 analysis of wind-train-bridge coupling vibration\n\n建立列车-桥梁耦合振动模型，为求解风荷载作用下列车和桥梁振动响应而进行的非线性有限元分析。"
+                        },
+                        {
+                            "subsubsection": "2.0.7",
+                            "subsubsection_contents": "延性构件 ductile member\n\n罕遇地震作用下，允许发生塑性变形的构件。"
+                        },
+                        {
+                            "subsubsection": "2.0.8",
+                            "subsubsection_contents": "能力保护原则 capacity protection principle\n\n罕遇地震作用下，使桥梁结构体系中延性构件和受能力保护的构件形成安全度等级差，以确保受能力保护的构件处于弹性范围之内的设计原则。"
+                        },
+                        {
+                            "subsubsection": "2.0.9",
+                            "subsubsection_contents": "能力保护构件 capacity protected member\n\n罕遇地震作用下，按能力保护设计原则设计的构件。"
+                        }
+                    ],
+                    "subsection_name": "No_NAME"
+                }
+            ],
+            "section_name": "术语"
+        },
+        {
+            "section": "3",
+            "section_contents": [
+                {
+                    "subsection": "3.1",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "3.1.1",
+                            "subsubsection_contents": "区间高架桥桥跨布置应根据地形地物、地面交通、城市景观等因素综合确定。一般地段宜采用等跨布置简支梁式桥跨结构。"
+                        },
+                        {
+                            "subsubsection": "3.1.2",
+                            "subsubsection_contents": "城市轨道交通桥梁宜进行景观设计，景观设计宜包括桥梁主体景观设计和景观工程设计。景观设计应根据城市规划要求、地域环境、历史文化传统和工程建设条件等因素综合确定。"
+                        },
+                        {
+                            "subsubsection": "3.1.3",
+                            "subsubsection_contents": "区间高架桥上部结构的材料宜采用预应力混凝土，并宜采用预制架设、预制节段拼装的结构。"
+                        },
+                        {
+                            "subsubsection": "3.1.4",
+                            "subsubsection_contents": "区间高架桥的桥下净空高度应符合表3.1.4的规定，并宜预留不小于  $0.20\\mathrm{m}$  的安全值。\n\n表 3.1.4 桥下净空高度 (m)  \n\n<table><tr><td>交通方式</td><td>桥下交通类别</td><td>最小净空高度</td></tr><tr><td rowspan=\"5\">道路</td><td>高速公路,一、二级公路</td><td>5.00</td></tr><tr><td>三、四级公路,城市道路机动车道</td><td>4.50</td></tr><tr><td>城市道路机动车道(小客车)</td><td>3.50</td></tr><tr><td>城市道路非机动车道、人行道</td><td>2.50</td></tr><tr><td>城市有轨电车、城市无轨电车、双层客车等特种车辆</td><td>满足车辆通行</td></tr><tr><td rowspan=\"2\">城市轨道交通</td><td>架空接触网城市轨道交通</td><td>6.00</td></tr><tr><td>接触轨城市轨道交通</td><td>4.30</td></tr><tr><td rowspan=\"3\">铁路</td><td>高速铁路</td><td>7.25</td></tr><tr><td>普通铁路</td><td>6.55</td></tr><tr><td>通行双层集装箱铁路</td><td>7.96</td></tr></table>\n\n注：净高指桥下路面至梁底、桥下轨面至梁底的高度。"
+                        },
+                        {
+                            "subsubsection": "3.1.5",
+                            "subsubsection_contents": "区间高架桥桥墩边缘至机动车道边的净距应符合现行行业标准《城市道路工程设计规范》CJJ37和《公路工程技术标准》JTG B01的规定。当区间高架桥敷设于道路中间时，道路中央分隔带宽度不宜小于  $4\\mathrm{m}$"
+                        },
+                        {
+                            "subsubsection": "3.1.6",
+                            "subsubsection_contents": "设置在地面车行道侧的墩柱宜设防撞设施；当跨越车行道的高架桥桥下净高小于  $5\\mathrm{m}$  时，应设置限高设施和警示标志。"
+                        },
+                        {
+                            "subsubsection": "3.1.7",
+                            "subsubsection_contents": "当桥梁承台或扩大基础侵入车行道时，其顶面应置于路面以下，且埋深不宜小于  $1.5\\mathrm{m}$ ；基础设计时应计入车辆活载的附加作用。"
+                        },
+                        {
+                            "subsubsection": "3.1.8",
+                            "subsubsection_contents": "区间高架桥与架空高压线之间的最小垂直距离应符合现行国家标准《66kV及以下架空电力线路设计规范》GB50061、《110kV～750kV架空输电线路设计规范》GB50545、《1000kV架空输电线路设计规范》GB50665的规定。"
+                        }
+                    ],
+                    "subsection_name": "区间高架桥梁布置"
+                },
+                {
+                    "subsection": "3.2",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "3.2.1",
+                            "subsubsection_contents": "区间跨河特大桥、大桥的桥位宜设置在河道顺直、河床稳定且地质良好的河段处；桥梁轴线宜与洪水流向正交。"
+                        },
+                        {
+                            "subsubsection": "3.2.2",
+                            "subsubsection_contents": "区间跨河桥的桥下净空应符合下列规定：\n\n1 梁底应高出按设计频率的洪水位及其增高值加安全高度。安全高度应符合表3.2.2的规定，洪水位的增高值应根据壅水高、河湾超高、河床淤积及波浪高综合确定；\n\n表 3.2.2 桥下安全高度 (m)  \n\n<table><tr><td>洪水期无大漂流物</td><td>0.50</td></tr><tr><td>洪水期有大漂流物</td><td>1.50</td></tr><tr><td>有泥石流</td><td>1.00</td></tr><tr><td>支承垫石顶面</td><td>0.25</td></tr><tr><td>拱脚</td><td>0.25</td></tr></table>\n\n2 通航河流的桥下净空应根据航道等级按现行国家标准《内河通航标准》GB50139的规定执行；通行海轮的桥下净空应\n\n符合现行行业标准《通航海轮桥梁通航标准》JTJ311的规定；\n\n3 对洪水期无大漂浮物通过的河流，实腹式无铰拱桥的拱脚可被设计洪水位淹没，但此水位不应超过矢高的一半，且距拱顶的净高不应小于  $1.0\\mathrm{m}$ 。"
+                        },
+                        {
+                            "subsubsection": "3.2.3",
+                            "subsubsection_contents": "当跨河桥梁与既有桥梁并行设置时，两桥间距应根据施工条件、水文干扰、防洪要求、通航影响等因素确定。"
+                        }
+                    ],
+                    "subsection_name": "区间跨河桥梁布置"
+                },
+                {
+                    "subsection": "3.3",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "3.3.1",
+                            "subsubsection_contents": "区间桥梁的桥面宽度应根据建筑限界、应急疏散、设备布置等因素计算确定，并应预留设备的安装、检修和更换条件。"
+                        },
+                        {
+                            "subsubsection": "3.3.2",
+                            "subsubsection_contents": "有砟轨道桥梁的挡砟墙内侧面到线路中心线净距不应小于  $2.2\\mathrm{m}$  。轨下枕底道砟厚度不应小于  $0.3\\mathrm{m}$  。"
+                        },
+                        {
+                            "subsubsection": "3.3.3",
+                            "subsubsection_contents": "区间桥梁线路中心线至架空接触网支柱中心的最小距离宜根据表3.3.3的规定对线路分段取值。\n\n表 3.3.3 线路中心线至架空接触网支柱中心最小距离  \n\n<table><tr><td>距离(m) 曲线半径R(m)</td><td>A型车</td><td>B2型车</td></tr><tr><td>300≤R≤600</td><td>2.70</td><td>2.55</td></tr><tr><td>600&lt;R≤1200</td><td>2.60</td><td>2.45</td></tr><tr><td>1200&lt;R≤3000</td><td>2.50</td><td>2.40</td></tr><tr><td>R&gt;3000及直线</td><td>2.40</td><td>2.30</td></tr></table>"
+                        },
+                        {
+                            "subsubsection": "3.3.4",
+                            "subsubsection_contents": "运行B1型车的桥梁，栏板内侧面至线路中心线的距离宜符合下列规定：\n\n1 当接触轨位于线路中间时，不宜小于  $2.20\\mathrm{m}$  \n2 当接触轨位于线路外侧时，不宜小于  $2.45\\mathrm{m}$"
+                        },
+                        {
+                            "subsubsection": "3.3.5",
+                            "subsubsection_contents": "道路与轨道交通合建的桥梁宜分层布置。当采用同层布置时，应在轨道交通和道路间设置SS级防撞墙，并应在防撞墙顶部加设防抛网，防撞墙与轨道交通建筑限界间的净距不应小于 $1.2\\mathrm{m}$  。SS级防撞墙应符合现行行业标准《公路交通安全设施设\n\n计规范》JTG D81的规定。"
+                        }
+                    ],
+                    "subsection_name": "桥面布置"
+                },
+                {
+                    "subsection": "3.4",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "3.4.1",
+                            "subsubsection_contents": "曲线上不宜设置大跨度桥梁；当设在曲线上时，宜采用较大的曲线半径。反向曲线上不宜设置大跨度桥梁。"
+                        },
+                        {
+                            "subsubsection": "3.4.2",
+                            "subsubsection_contents": "在竖曲线及缓和曲线上，不宜设置钢桁梁桥。"
+                        },
+                        {
+                            "subsubsection": "3.4.3",
+                            "subsubsection_contents": "区间高架桥梁底离地面的高度不宜小于  $1.5\\mathrm{m}$"
+                        }
+                    ],
+                    "subsection_name": "桥上线路"
+                },
+                {
+                    "subsection": "3.5",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "3.5.1",
+                            "subsubsection_contents": "桥面两侧应设置栏板，其高度不宜小于  $1.1\\mathrm{m}$  。当多线桥分为单线时，单线桥内侧栏板应连续。"
+                        },
+                        {
+                            "subsubsection": "3.5.2",
+                            "subsubsection_contents": "梁缝处应设伸缩缝，伸缩缝应能适应梁端部自由伸缩，且应具备防止桥面水下漏的功能。"
+                        },
+                        {
+                            "subsubsection": "3.5.3",
+                            "subsubsection_contents": "桥面应设置防水层，其技术指标及施工工艺应符合现行行业标准《铁路混凝土桥面防水层技术条件》TB/T2965的规定。"
+                        },
+                        {
+                            "subsubsection": "3.5.4",
+                            "subsubsection_contents": "桥面防水保护层顶面宜设置不小于  $2\\%$  的排水横坡和不小于  $3\\%$  的排水纵坡。纵向应分段设置拦水构造，并应设排水管将雨水排入市政管网。"
+                        },
+                        {
+                            "subsubsection": "3.5.5",
+                            "subsubsection_contents": "城市轨道交通桥梁不应作为下列设施的支承结构：\n\n1输送压力大于或等于  $0.4\\mathrm{MPa}$  的燃气管道：\n\n2 电压高于  $10\\mathrm{kV}$  的供电电缆：\n\n3 污水管：\n\n4 可燃、有毒或腐蚀性的液体管和气体管。"
+                        }
+                    ],
+                    "subsection_name": "附属设施"
+                },
+                {
+                    "subsection": "3.6",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "3.6.1",
+                            "subsubsection_contents": "区间高架桥主体设计宜符合下列规定：\n\n1 桥梁孔跨布置宜均衡、有韵律感，相邻孔跨差异不宜过大；\n\n2 跨径与墩柱高度之比宜控制在  $3:1 \\sim 5:1$  之间，且宜控\n\n制梁高；\n\n3 桥墩的建筑风格宜统一；  \n4 当同一桥墩两侧的梁体高度和宽度有差异时，宜设置视觉平顺过渡构造。"
+                        },
+                        {
+                            "subsubsection": "3.6.2",
+                            "subsubsection_contents": "桥梁构件的体量较大时，应采用可实现视觉分割效果的措施进行处理。"
+                        },
+                        {
+                            "subsubsection": "3.6.3",
+                            "subsubsection_contents": "桥梁的景观照明与功能照明应统筹兼顾，应经济、适用、安全，景观效果应良好。"
+                        },
+                        {
+                            "subsubsection": "3.6.4",
+                            "subsubsection_contents": "桥上的栏板、接触网、声屏障、信号、通信、排水、照明等各类设施的布设宜与桥梁整体景观协调。"
+                        }
+                    ],
+                    "subsection_name": "桥梁景观"
+                }
+            ],
+            "section_name": "基本规定"
+        },
+        {
+            "section": "4",
+            "section_contents": [
+                {
+                    "subsection": "4.1",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "4.1.1",
+                            "subsubsection_contents": "主体结构的钢筋混凝土构件混凝土强度等级不得低于C30，预应力混凝土构件的混凝土强度等级不得低于C40，管道压浆用水泥浆强度等级不宜低于M50。非主体结构构件的混凝土强度等级不应低于C25。"
+                        },
+                        {
+                            "subsubsection": "4.1.2",
+                            "subsubsection_contents": "混凝土的极限强度取值应符合表4.1.2的规定。\n\n表 4.1.2 混凝土极限强度(MPa)  \n\n<table><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><td>C20</td><td>C25</td><td>C30</td><td>C35</td><td>C40</td><td>C45</td><td>C50</td><td>C55</td><td>C60</td><td></td><td></td></tr><tr><td>轴心抗压</td><td>fc</td><td>13.5</td><td>17.0</td><td>20.0</td><td>23.5</td><td>27.0</td><td>30.0</td><td>33.5</td><td>37.0</td><td>40.0</td></tr><tr><td>轴心抗拉</td><td>fct</td><td>1.70</td><td>2.00</td><td>2.20</td><td>2.50</td><td>2.70</td><td>2.90</td><td>3.10</td><td>3.30</td><td>3.50</td></tr></table>"
+                        },
+                        {
+                            "subsubsection": "4.1.3",
+                            "subsubsection_contents": "混凝土受压或受拉时的弹性模量  $E_{\\mathrm{c}}$  的取值应符合表4.1.3的规定。混凝土的剪切变形模量  $G_{\\mathrm{c}}$  宜按表4.1.3规定的弹性模量  $E_{\\mathrm{c}}$  的0.43倍采用。混凝土泊松比  $\\nu_{\\mathrm{C}}$  宜采用0.2。\n\n表 4.1.3 混凝土弹性模量  ${\\mathbf{E}}_{\\mathrm{c}}\\left( {\\times {10}^{4}\\mathrm{{MPa}}}\\right)$  \n\n<table><tr><td>强度等级</td><td>C20</td><td>C25</td><td>C30</td><td>C35</td><td>C40</td><td>C45</td><td>C50</td><td>C55</td><td>C60</td></tr><tr><td>弹性模量Ec</td><td>2.80</td><td>3.00</td><td>3.20</td><td>3.30</td><td>3.40</td><td>3.45</td><td>3.55</td><td>3.60</td><td>3.65</td></tr></table>"
+                        },
+                        {
+                            "subsubsection": "4.1.4",
+                            "subsubsection_contents": "混凝土的容许应力应符合现行行业标准《铁路桥涵混凝土结构设计规范》TB10092的规定。"
+                        }
+                    ],
+                    "subsection_name": "混凝土"
+                },
+                {
+                    "subsection": "4.2",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "4.2.1",
+                            "subsubsection_contents": "混凝土结构的普通钢筋和预应力钢筋应符合下列规定：\n\n1 普通钢筋可采用HPB300或HRB400钢筋，其技术条件\n\n应符合现行国家标准《钢筋混凝土用钢 第1部分：热轧光圆钢筋》GB1499.1或《钢筋混凝土用钢 第2部分：热轧带肋钢筋》GB1499.2的规定；\n\n2 预应力钢绞线应符合现行国家标准《预应力混凝土用钢绞线》GB/T5224的规定；  \n3 预应力混凝土用螺纹钢筋应符合现行国家标准《预应力混凝土用螺纹钢筋》GB/T20065的规定。"
+                        },
+                        {
+                            "subsubsection": "4.2.2",
+                            "subsubsection_contents": "普通钢筋、预应力混凝土用螺纹钢筋抗拉强度标准值应符合表4.2.2的规定。\n\n表 4.2.2 钢筋抗拉强度标准值  \n\n<table><tr><td rowspan=\"2\">种类强度</td><td colspan=\"2\">普通钢筋fsk</td><td colspan=\"2\">预应力混凝土用螺纹钢筋fpk</td></tr><tr><td>HPB300</td><td>HRB400</td><td>PSB830</td><td>PSB930</td></tr><tr><td>抗拉强度标准值（MPa）</td><td>300</td><td>400</td><td>830</td><td>930</td></tr></table>\n\n注：预应力混凝土用螺纹钢筋主要用作横向、竖向预应力筋；其抗拉强度标准值应取屈服强度值。"
+                        },
+                        {
+                            "subsubsection": "4.2.3",
+                            "subsubsection_contents": "预应力钢丝抗拉强度标准值应符合表4.2.3的规定。\n\n表 4.2.3 预应力钢丝抗拉强度标准值  ${f}_{\\mathrm{{pk}}}$  \n\n<table><tr><td>公称直径(mm)</td><td>4~5</td><td>6~7</td></tr><tr><td>1670</td><td>1670</td><td></td></tr><tr><td>1770</td><td>1770</td><td></td></tr><tr><td>1860</td><td>-</td><td></td></tr></table>"
+                        },
+                        {
+                            "subsubsection": "4.2.4",
+                            "subsubsection_contents": "预应力钢绞线抗拉强度标准值应符合表4.2.4的规定。\n\n表 4.2.4 预应力钢绞线抗拉强度标准值  ${f}_{\\mathrm{{pk}}}$  \n\n<table><tr><td rowspan=\"2\">公称直径(mm)</td><td colspan=\"2\">12.7</td><td colspan=\"2\">15.2</td><td>15.7</td></tr><tr><td>标准型</td><td>模拔型</td><td>标准型</td><td>模拔型</td><td>标准型</td></tr><tr><td>抗拉强度标准值(MPa)</td><td>172018601960</td><td>1860</td><td>147015701670172018601960</td><td>1820</td><td>17701860</td></tr></table>"
+                        },
+                        {
+                            "subsubsection": "4.2.5",
+                            "subsubsection_contents": "钢筋计算强度的取值应符合表4.2.5的规定。\n\n表 4.2.5 钢筋计算强度(MPa)  \n\n<table><tr><td colspan=\"2\">钢筋类型</td><td>抗拉计算强度 \\( {f}_{\\mathrm{p}} \\) 或 \\( {f}_{\\mathrm{s}} \\)</td><td>抗压计算强度 \\( {f}_{\\mathrm{p}}^{\\prime } \\) 或 \\( {f}_{\\mathrm{s}}^{\\prime } \\)</td></tr><tr><td>预应力筋</td><td>钢绞线、预应力混凝土 用螺纹钢筋</td><td>0.9 \\( {f}_{\\mathrm{{pk}}} \\)</td><td>380</td></tr><tr><td rowspan=\"2\">普通钢筋</td><td>HPB300</td><td>300</td><td>300</td></tr><tr><td>HRB400</td><td>400</td><td>400</td></tr></table>"
+                        },
+                        {
+                            "subsubsection": "4.2.6",
+                            "subsubsection_contents": "钢筋弹性模量的取值应符合表4.2.6的规定，其中计算钢绞线伸长值时，钢绞线的弹性模量可按  $E_{\\mathrm{p}} \\pm 0.1 \\times 10^{5} \\mathrm{MPa}$  作为上、下限值。\n\n表 4.2.6 钢筋弹性模量 (MPa)  \n\n<table><tr><td>钢筋种类</td><td>符号</td><td>弹性模量</td></tr><tr><td>钢绞线</td><td>Ep</td><td>1.95×10^5</td></tr><tr><td>预应力混凝土用螺纹钢筋</td><td>Ep</td><td>2.0×10^5</td></tr><tr><td>HPB300</td><td>Es</td><td>2.1×10^5</td></tr><tr><td>HRB400</td><td>Es</td><td>2.0×10^5</td></tr></table>"
+                        },
+                        {
+                            "subsubsection": "4.2.7",
+                            "subsubsection_contents": "钢筋的容许应力应符合下列规定：\n\n1 HPB300和HRB400钢筋在主力作用下，容许应力  $[\\sigma_{\\mathrm{s}}]$  应分别取  $160\\mathrm{MPa}$  或  $210\\mathrm{MPa}$  \n2 HPB300和HRB400钢筋在主力加附加力作用下，容许应力  $[\\sigma_{\\mathrm{s}}]$  应分别取  $210\\mathrm{MPa}$  或  $270\\mathrm{MPa}$  \n3 当检算安装荷载产生的应力时，钢筋的容许应力  $[\\sigma_{\\mathrm{s}}]$  ：HPB300钢筋应取  $230\\mathrm{MPa}$ ，HRB400钢筋应取  $297\\mathrm{MPa}$ 。"
+                        },
+                        {
+                            "subsubsection": "4.2.8",
+                            "subsubsection_contents": "斜拉索、吊杆索用高强钢丝可采用  $\\phi 5$  或  $\\phi 7$  热镀锌或其他防护钢丝，其标准强度不应低于  $1670\\mathrm{MPa}$ ，热镀锌钢丝的性能宜满足现行国家标准《桥梁缆索用热镀锌钢丝》GB/T17101的要求。"
+                        },
+                        {
+                            "subsubsection": "4.2.9",
+                            "subsubsection_contents": "斜拉索、吊杆索用钢绞线可采用高强度低松弛镀锌或其\n\n他防护钢绞线，其标准强度不宜低于  $1860\\mathrm{MPa}$ ，其性能宜满足现行国家标准《斜拉桥钢绞线拉索技术条件》GB/T30826的要求。"
+                        },
+                        {
+                            "subsubsection": "4.2.10",
+                            "subsubsection_contents": "斜拉索、吊杆索用高强钢丝的弹性模量  $E_{\\mathrm{p}}$  可取  $2.05\\times$ $10^{5}\\mathrm{MPa}$  ，钢绞线的弹性模量  $E_{\\mathrm{p}}$  可取  $1.95\\times 10^{5}\\mathrm{MPa}$"
+                        }
+                    ],
+                    "subsection_name": "钢筋"
+                },
+                {
+                    "subsection": "4.3",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "4.3.1",
+                            "subsubsection_contents": "结构用钢材宜根据当地极端最低温度选取表4.3.1中的钢材，其化学成分、力学性能、工艺性能、焊接性能及  $Z$  向性能还应满足设计要求。当环境极端最低温度低于  $-20^{\\circ}\\mathrm{C}$  时，应采用E级钢。\n\n表 4.3.1 主要结构用钢材  \n\n<table><tr><td colspan=\"2\">名称</td><td>钢材牌号</td><td>质量等级</td><td>应符合的标准</td></tr><tr><td rowspan=\"3\" colspan=\"2\">主体结构</td><td>Q345q</td><td rowspan=\"3\">D、E级</td><td rowspan=\"3\">《桥梁用结构钢》GB/T 714</td></tr><tr><td>Q370q</td></tr><tr><td>Q420q</td></tr><tr><td colspan=\"2\">辅助结构</td><td colspan=\"2\">Q235-B.Z</td><td>《碳素结构钢》GB/T 700</td></tr><tr><td rowspan=\"3\">高强度螺栓</td><td rowspan=\"2\">螺栓</td><td colspan=\"2\">20MnTiB</td><td>《合金结构钢》GB/T 3077</td></tr><tr><td colspan=\"2\">35VB</td><td>《钢结构用高强度大六角头螺栓,大六角螺母,垫圈技术条件》GB/T 1231</td></tr><tr><td>螺母及垫圈</td><td colspan=\"2\">35、45、15MnVB</td><td>《优质碳素结构钢》GB/T 699</td></tr><tr><td colspan=\"2\">圆柱头焊钉(栓钉)</td><td colspan=\"2\">ML15、ML15A1</td><td>《电弧螺柱焊用圆柱头焊钉》GB/T 10433</td></tr></table>"
+                        },
+                        {
+                            "subsubsection": "4.3.2",
+                            "subsubsection_contents": "高强度大六角头螺栓、大六角螺母和垫圈应符合现行国家标准《钢结构用高强度大六角头螺栓》GB/T1228、《钢结构用高强度大六角螺母》GB/T1229、《钢结构用高强度垫圈》GB/T1230和《钢结构用高强度大六角头螺栓，大六角螺母，垫圈技术条件》GB/T1231的规定。"
+                        },
+                        {
+                            "subsubsection": "4.3.3",
+                            "subsubsection_contents": "焊接性能应与基材相匹配，选用的焊接材料、焊接工艺，均应根据设计要求通过焊接工艺评定确定。焊接接头的冲击韧性不得低于母材标准值。"
+                        },
+                        {
+                            "subsubsection": "4.3.4",
+                            "subsubsection_contents": "钢结构涂装材料宜符合现行行业标准《铁路钢桥保护涂装及涂料供货技术条件》TB/T1527的规定。"
+                        },
+                        {
+                            "subsubsection": "4.3.5",
+                            "subsubsection_contents": "钢材的弹性系数取值宜符合表4.3.5的规定。\n\n表 4.3.5 钢材弹性系数  \n\n<table><tr><td>弹性模量E(MPa)</td><td>剪切模量G(MPa)</td><td>泊松比ν</td></tr><tr><td>2.1×105</td><td>8.1×104</td><td>0.3</td></tr></table>"
+                        },
+                        {
+                            "subsubsection": "4.3.6",
+                            "subsubsection_contents": "钢材的屈服强度和基本容许应力取值应符合表4.3.6的规定。\n\n表 4.3.6 屈服强度和基本容许应力 (MPa)  \n\n<table><tr><td rowspan=\"4\">序号</td><td rowspan=\"4\">应力种类</td><td colspan=\"6\">钢材牌号</td></tr><tr><td colspan=\"2\">Q345qDQ345qE</td><td colspan=\"2\">Q370qDQ370qE</td><td colspan=\"2\">Q420qDQ420qE</td></tr><tr><td colspan=\"6\">厚度（mm）</td></tr><tr><td>≤50</td><td>&gt;50</td><td>≤50</td><td>&gt;50</td><td>≤50</td><td>&gt;50</td></tr><tr><td>1</td><td>屈服强度 [σs]</td><td>345</td><td>335</td><td>370</td><td>360</td><td>420</td><td>410</td></tr><tr><td>2</td><td>轴向应力 [σ]</td><td>200</td><td>195</td><td>210</td><td>205</td><td>230</td><td>225</td></tr><tr><td>3</td><td>弯曲应力 [σw]</td><td>210</td><td>205</td><td>220</td><td>215</td><td>240</td><td>235</td></tr><tr><td>4</td><td>剪应力 [τ]</td><td>120</td><td>115</td><td>125</td><td>120</td><td>140</td><td>135</td></tr><tr><td>5</td><td>端部承压（磨光顶紧）应力</td><td>300</td><td>290</td><td>315</td><td>305</td><td>345</td><td>335</td></tr></table>"
+                        },
+                        {
+                            "subsubsection": "4.3.7",
+                            "subsubsection_contents": "工厂焊缝基本容许应力宜与基材相同，并不应大于基材的容许应力。"
+                        },
+                        {
+                            "subsubsection": "4.3.8",
+                            "subsubsection_contents": "高强螺栓预拉力的设计值应符合表4.3.8的规定。\n\n表 4.3.8 高强螺栓预拉力的设计值  \n\n<table><tr><td>螺纹直径</td><td>M22</td><td>M24</td><td>M27</td><td>M30</td></tr><tr><td>性能等级</td><td colspan=\"4\">10.9S</td></tr><tr><td>预拉力设计值(kN)</td><td>200</td><td>240</td><td>290</td><td>360</td></tr></table>"
+                        },
+                        {
+                            "subsubsection": "4.3.9",
+                            "subsubsection_contents": "当采用抗滑型高强螺栓连接时，设计抗滑移系数应采用0.45。"
+                        },
+                        {
+                            "subsubsection": "4.3.10",
+                            "subsubsection_contents": "精制螺栓容许应力应符合表4.3.10的规定。\n\n表 4.3.10 精制螺栓容许应力 (MPa)  \n\n<table><tr><td>受力种类</td><td>容许应力</td></tr><tr><td>剪切</td><td>90</td></tr><tr><td>承压</td><td>220</td></tr></table>"
+                        }
+                    ],
+                    "subsection_name": "钢材"
+                }
+            ],
+            "section_name": "材料"
+        },
+        {
+            "section": "5",
+            "section_contents": [
+                {
+                    "subsection": "5.1",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "5.1.1",
+                            "subsubsection_contents": "桥梁结构设计采用的荷载应分为主力、附加力和特殊荷载，荷载分类应符合表5.1.1的规定。\n\n表 5.1.1 荷载分类  \n\n<table><tr><td colspan=\"2\">荷载分类</td><td>荷载名称</td></tr><tr><td rowspan=\"3\">主力</td><td>恒载</td><td>结构自重附属设备和附属建筑自重预加力混凝土收缩及徐变影响基础变位的影响土压力静水压力及浮力</td></tr><tr><td>活载</td><td>列车竖向静活载列车竖向动力作用列车离心力列车横向摇摆力列车竖向静活载产生的土压力公路或城市桥梁活载人群荷载</td></tr><tr><td>无缝线路纵向水平力</td><td>伸缩力挠曲力</td></tr><tr><td colspan=\"2\">附加力</td><td>制动力或牵引力风力温度影响力流水压力救援、检修列车荷载顶梁荷载</td></tr></table>\n\n续表5.1.1  \n\n<table><tr><td>荷载分类</td><td>荷载名称</td></tr><tr><td>特殊荷载</td><td>无缝线路断轨力\n船只或汽车的撞击力\n地震力\n施工临时荷载\n列车脱轨荷载\n列车脱轨水平撞击力</td></tr></table>\n\n注：如杆件的主要用途为承受某种附加力，则在计算此杆件时，该附加力应按主力计。"
+                        },
+                        {
+                            "subsubsection": "5.1.2",
+                            "subsubsection_contents": "当设计中需计入其他荷载时，宜根据其性质按本规范表5.1.1进行分类。"
+                        }
+                    ],
+                    "subsection_name": "荷载分类"
+                },
+                {
+                    "subsection": "5.2",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "5.2.1",
+                            "subsubsection_contents": "计算结构自重时，常用材料容重应按现行行业标准《铁路桥涵设计规范》TB10002的规定取用。"
+                        },
+                        {
+                            "subsubsection": "5.2.2",
+                            "subsubsection_contents": "土压力的计算应按现行行业标准《铁路桥涵设计规范》TB10002的规定执行。"
+                        },
+                        {
+                            "subsubsection": "5.2.3",
+                            "subsubsection_contents": "列车竖向静活载确定应符合下列规定：\n\n1 列车竖向静活载图式应按本线列车的最大轴重、轴距及初期、近期和远期中最长的列车编组确定；  \n2 对单线或双线桥梁结构，应按列车活载作用于每一条线路确定；\n\n3 对多于两线的桥梁结构，应按下列最不利情况确定：\n\n1）按两条线路在最不利位置承受列车活载，其余线路不承受列车活载；  \n2）所有线路在最不利位置承受  $75\\%$  的列车活载；\n\n4 对承受局部荷载的构件，均应为该活荷载的  $100\\%$\n\n5 活载图式应按实际列车编组进行加载，但对影响线异符号区段，轴重应按空车重计。列车加载长度应采用本线初期、近\n\n期和远期中最不利的编组。"
+                        },
+                        {
+                            "subsubsection": "5.2.4",
+                            "subsubsection_contents": "列车活载的效应为列车静活载与列车竖向动力作用效应之和，列车的竖向动力作用应按列车竖向静活载乘以动力系数  $\\mu$  进行计算。动力系数  $\\mu$  的取值应符合下列规定：\n\n1 支承轮轨式轨道交通的桥梁的动力系数  $\\mu$  根据列车最高运行速度  $V$  应按下列规定取值：\n\n1）当  $V = 120\\mathrm{km / h}$  时，动力系数应按现行行业标准《铁路桥涵设计规范》TB10002规定的  $\\mu$  取值；\n\n2）当  $V \\leqslant 80\\mathrm{km / h}$  时，动力系数应按现行行业标准《铁路桥涵设计规范》TB10002规定的  $\\mu$  取值乘以0.8；\n\n3）当  $80\\mathrm{km / h} < V < 120\\mathrm{km / h}$  时，动力系数应按列车最高运行速度进行线性插值确定。\n\n2 支承单轨交通轨道梁的桥梁结构的动力系数  $\\mu$  应按下式计算：\n\n$$\n\\mu = \\left(1 + \\frac {2 0}{5 0 + L _ {1}}\\right) \\cdot \\frac {2 0}{5 0 + L _ {2}} \\tag {5.2.4}\n$$\n\n式中：  $L_{1}$  ——轨道梁的跨度（m）；\n\n$L_{2}$  ——支承单轨交通轨道梁的桥梁的跨度（m）。\n\n3 单线U形梁桥道板的动力系数  $\\mu$  宜取0.4，双线U形梁桥道板的动力系数宜取0.3。\n\n4 计算活载引起的土压力时可不计竖向动力作用。"
+                        },
+                        {
+                            "subsubsection": "5.2.5",
+                            "subsubsection_contents": "钢桥的疲劳活载应采用运营列车活载，其动力系数应按本规范第5.2.4条计算的动力系数的0.75倍取值；钢桥的疲劳加载方式应符合下列规定：\n\n1 双线钢桁梁的主桁和钢板梁整体受力应按现行行业标准《铁路桥梁钢结构设计规范》TB10002.2的规定执行；  \n2 钢桁梁的横梁、钢箱梁的横肋、横隔板及钢板梁的横隔板，应根据实际可能出现的最不利情况进行加载；  \n3 钢桁梁的纵梁、正交异性桥面板的纵肋，应根据单线荷\n\n载可能出现的最不利情况进行加载。"
+                        },
+                        {
+                            "subsubsection": "5.2.6",
+                            "subsubsection_contents": "救援列车荷载和检修列车荷载应符合下列规定：\n\n1 救援列车荷载应根据运营救援模式确定。当无详细资料时，救援列车荷载宜取一列满载列车，并应与运营列车进行最不利组合。  \n2 检修列车荷载应根据检修列车的实际情况确定。"
+                        },
+                        {
+                            "subsubsection": "5.2.7",
+                            "subsubsection_contents": "列车轴重引起的集中荷载由于轨道结构引起的分布宜按下列规定进行计算：\n\n1 列车轴重引起的集中荷载沿线路方向可分布于三个钢轨支点上（图5.2.7-1）；\n\n图5.2.7-1 列车轴重荷载沿线路方向的分布  \n![](images/05c19f2141011473fc4cc561357d502e7a10b72b90e81ba3581d87e2ab4eb79c.jpg)  \n$Q_{vi}$  —列车轴重引起的集中荷载；  $a$  一钢轨支点纵向间距\n\n2 列车轴重引起的集中荷载在无砟轨道中垂直线路方向的分布宽度宜按轨底宽加两倍轨下基础高度计算（图5.2.7-2）。\n\n图5.2.7-2 列车轴重荷载沿垂直线路方向的分布  \n![](images/9679888a42f8d7bf9a0e045477e96e3dd2e9f795291c585f3fd6d6b51640373d.jpg)  \n$P$  —列车轴重考虑纵向分布后的集中荷载；  $q$  —分布荷载的集度"
+                        },
+                        {
+                            "subsubsection": "5.2.8",
+                            "subsubsection_contents": "位于曲线上的桥梁应计算列车产生的离心力，离心力计算应符合下列规定：\n\n1 离心力应按下式计算：\n\n$$\nF = \\frac {V ^ {2}}{1 2 7 R} N \\tag {5.2.8}\n$$\n\n式中：  $V$  ——列车的运行速度（  $\\mathrm{km / h}$  ）；\n\n$R$  ——曲线半径（m）；\n\n$N$  ——竖向静活载（kN）。\n\n2 离心力作用点应位于轨面以上  $1.8\\mathrm{m}$  处。"
+                        },
+                        {
+                            "subsubsection": "5.2.9",
+                            "subsubsection_contents": "列车横向摇摆力应按相邻两节车四个轴轴重的  $15\\%$  计，应以横桥向集中力形式取最不利位置作用于轨顶面。多线桥可只计算任一条线上的横向摇摆力。"
+                        },
+                        {
+                            "subsubsection": "5.2.10",
+                            "subsubsection_contents": "列车制动力或牵引力计算应符合下列规定：\n\n1 区间桥梁的制动力或牵引力应按竖向静活载的  $15\\%$  计算；当制动力或牵引力与离心力同时计算时，宜按竖向静活载的 $10\\%$  计算；  \n2 区间双线桥宜仅计算一条线的制动力或牵引力；多线桥宜仅计算两条线的制动力或牵引力；  \n3 对高架车站及与车站相邻两侧  $100\\mathrm{m}$  范围内的区间双线桥应计算双线制动力或牵引力，每条线制动力或牵引力值应为竖向静活载的  $10\\%$  \n4 制动力或牵引力应作用于轨顶以上车辆重心处，但计算墩台时应移至支座中心处，计算刚架结构时应移至横梁中线处，均不计移动作用点所产生的力矩。"
+                        },
+                        {
+                            "subsubsection": "5.2.11",
+                            "subsubsection_contents": "列车竖向静活载在桥台后破坏棱体上引起的侧向土压力，应按现行行业标准《铁路桥涵设计规范》TB10002的规定计算。"
+                        },
+                        {
+                            "subsubsection": "5.2.12",
+                            "subsubsection_contents": "无缝线路的伸缩力、挠曲力和断轨力，应根据轨道结构及梁-轨共同作用的原理分别按下列规定计算：\n\n1 单线及多线桥宜仅计算一根钢轨的断轨力；  \n2 伸缩力、挠曲力、断轨力应作用于墩台上的支座中心处，不应计其实际作用点至支座中心的力矩影响；  \n3 当梁的内力效应中需计入伸缩力、挠曲力、断轨力的影响时，应进行专项研究。"
+                        },
+                        {
+                            "subsubsection": "5.2.13",
+                            "subsubsection_contents": "风荷载应按现行行业标准《铁路桥涵设计规范》TB10002的规定执行。"
+                        },
+                        {
+                            "subsubsection": "5.2.14",
+                            "subsubsection_contents": "温度影响的取值应符合下列规定：\n\n1 体系温差应从结构合龙时算起。钢结构桥梁的体系温差宜分别取合龙温度与历年极端最低气温、极端最高气温的差值；混凝土结构桥梁的体系温差宜分别取合龙温度与历年最冷月平均气温最低值、最热月平均气温最高值的差值。  \n2 温度梯度的计算宜根据结构类型的不同分别按下列规定取值：\n\n1）混凝土梁竖向温度梯度宜按表5.2.14-1的规定取值；\n\n表 5.2.14-1 混凝土梁竖向温度梯度  \n\n<table><tr><td>温度变化</td><td>升温</td><td>降温</td></tr><tr><td>温度梯度</td><td>ΔT1=14℃ ΔT2=5.5℃</td><td>ΔT1=7℃ ΔT2=-2.8℃</td></tr></table>\n\n2）结合梁的温度梯度宜按表5.2.14-2的规定取值；\n\n表 5.2.14-2 结合梁的温度梯度  \n\n<table><tr><td>温度变化</td><td>升温</td><td>降温</td></tr><tr><td>温度梯度</td><td>ΔT1=10℃</td><td>ΔT1= -10℃</td></tr></table>\n\n注：  $h$  为桥面板的厚度（m）。\n\n3）钢箱梁的温度梯度宜按表5.2.14-3的规定取值；\n\n表 5.2.14-3 钢箱梁的温度梯度  \n\n<table><tr><td>温度变化</td><td>升温</td><td>降温</td></tr><tr><td>温度梯度</td><td>h1=0.1m ΔT1=19℃\nh2=0.2m ΔT2=11℃\nh3=0.3m ΔT3=6℃\nΔT1=3℃</td><td>h1=0.5m ΔT1=-6℃</td></tr></table>\n\n注：  $h$  为梁高  $(\\mathrm{m})$  。\n\n4）钢桁梁上层正交异性板桥面的温度梯度宜按表5.2.14-4的规定取值；\n\n表 5.2.14-4 钢桁梁上层正交异性板桥面的温度梯度  \n\n<table><tr><td>温度变化</td><td>升温</td><td>降温</td></tr><tr><td>温度梯度</td><td>h1=0.5m ΔT1=17℃</td><td>ΔT1= -5℃ h1=0.1m</td></tr></table>\n\n注：  $h$  为正交异性板的高度  $(\\mathrm{m})$  。\n\n5）混凝土箱梁箱内外温差宜按  $\\pm 5^{\\circ}\\mathrm{C}$  取值。\n\n3 拉索、吊杆等钢构件与梁、塔、拱肋等混凝土构件之间的温差宜取  $\\pm 10^{\\circ}\\mathrm{C} \\sim \\pm 15^{\\circ}\\mathrm{C}$ ；斜拉桥斜拉索与钢主梁温差宜取  $\\pm 10^{\\circ}\\mathrm{C}$ 。"
+                        },
+                        {
+                            "subsubsection": "5.2.15",
+                            "subsubsection_contents": "混凝土的收缩、徐变影响宜按现行行业标准《公路钢筋混凝土及预应力混凝土桥涵设计规范》JTG D62的规定执行。"
+                        },
+                        {
+                            "subsubsection": "5.2.16",
+                            "subsubsection_contents": "桥墩承受的船只撞击力宜按现行行业标准《铁路桥涵设计规范》TB10002的规定执行。"
+                        },
+                        {
+                            "subsubsection": "5.2.17",
+                            "subsubsection_contents": "桥墩承受的汽车撞击力顺行车方向宜采用  $1000\\mathrm{kN}$ ，横行车方向宜采用  $500\\mathrm{kN}$ ，应作用在路面以上  $1.2\\mathrm{m}$  高度处。"
+                        },
+                        {
+                            "subsubsection": "5.2.18",
+                            "subsubsection_contents": "桥梁设计应按下列情况验算列车脱轨荷载作用：\n\n1 多线桥宜仅计一线脱轨荷载，其他线路上不应作用列车荷载。\n\n2 当列车脱轨后一侧车轮仍停留在轨道范围内时，应检算桥面板强度，材料容许应力提高系数宜取1.4，列车脱轨荷载应符合下列规定：\n\n1）脱轨荷载应为集中荷载，数值应取本线列车实际轴重的  $1 / 2$  ，并不宜计列车动力系数；  \n2）脱轨荷载应作用于线路中线两侧  $2.1\\mathrm{m}$  以内的桥面板\n\n最不利位置处。\n\n3 当列车脱轨后，列车已离开轨道范围，但仍停留在桥面上时，应检算结构的横向倾覆稳定性，倾覆稳定系数不应小于1.3，列车脱轨荷载应符合下列规定：\n\n1）脱轨线荷载数值宜取本线列车一节车轴重之和除以 $20\\mathrm{m}$  ，不宜计列车动力系数、离心力和另一线竖向荷载；  \n2）脱轨荷载应为线荷载，线荷载应作用于长度为  $20\\mathrm{m}$  、距中线之外  $1.4\\mathrm{m}$  的平行线段上。"
+                        },
+                        {
+                            "subsubsection": "5.2.19",
+                            "subsubsection_contents": "施工临时荷载应根据施工方法和工艺的实际情况确定。"
+                        },
+                        {
+                            "subsubsection": "5.2.20",
+                            "subsubsection_contents": "桥面人行道和疏散平台的竖向静活载应采用  $4.0\\mathrm{kPa}$  人行道板还应按竖向集中荷载1.5kN检算。"
+                        },
+                        {
+                            "subsubsection": "5.2.21",
+                            "subsubsection_contents": "桥梁栏板结构的横向水平推力和竖向压力应分别按  $0.75\\mathrm{kN / m}$  和  $0.36\\mathrm{kN / m}$  计算，水平推力应作用于桥面以上  $1.2\\mathrm{m}$  处。"
+                        }
+                    ],
+                    "subsection_name": "荷载取值"
+                },
+                {
+                    "subsection": "5.3",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "5.3.1",
+                            "subsubsection_contents": "桥梁结构应按本规范第5.1.1条所列荷载根据可能出现的最不利组合进行计算。"
+                        },
+                        {
+                            "subsubsection": "5.3.2",
+                            "subsubsection_contents": "桥梁设计时，主力宜仅与一个方向附加力进行组合。"
+                        },
+                        {
+                            "subsubsection": "5.3.3",
+                            "subsubsection_contents": "轨道交通与道路交通合建桥梁的轨道交通活载应按本规范第5.2节的规定进行计算，道路活载应根据道路性质按现行行业标准《公路桥涵设计通用规范》JTG D60或《城市桥梁设计规范》CJJ11的规定进行计算，轨道交通活载与道路活载的组合应符合下列规定：\n\n1 对同时承受轨道交通和道路活载的构件，应按最不利组合取值：\n\n1） $100\\%$  轨道交通活载与  $85\\%$  的道路活载的组合；  \n2） $85\\%$  轨道交通活载与  $100\\%$  的道路活载的组合。\n\n2 对仅承受道路活载的构件，应取全部道路活载。\n\n3 对仅承受轨道交通活载的构件，应取本规范第5.2节规定的全部活载。"
+                        },
+                        {
+                            "subsubsection": "5.3.4",
+                            "subsubsection_contents": "同一股钢轨的伸缩力、挠曲力、断轨力不应相互组合；无缝线路纵向水平力不应与同线的离心力、牵引力或制动力进行组合。"
+                        },
+                        {
+                            "subsubsection": "5.3.5",
+                            "subsubsection_contents": "无缝线路断轨力及船只或汽车撞击力，只应选取其中一种荷载与主力进行组合，不应与其他附加力组合。"
+                        },
+                        {
+                            "subsubsection": "5.3.6",
+                            "subsubsection_contents": "流水压力不应与制动力或牵引力组合。"
+                        },
+                        {
+                            "subsubsection": "5.3.7",
+                            "subsubsection_contents": "地震力与其他荷载的组合应按现行国家标准《铁路工程抗震设计规范》GB50111的规定执行。"
+                        },
+                        {
+                            "subsubsection": "5.3.8",
+                            "subsubsection_contents": "列车脱轨荷载不应与其他附加力组合。"
+                        }
+                    ],
+                    "subsection_name": "荷载组合"
+                }
+            ],
+            "section_name": "设计荷载"
+        },
+        {
+            "section": "6",
+            "section_contents": [
+                {
+                    "subsection": "6.0",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "6.0.1",
+                            "subsubsection_contents": "梁式桥跨结构由列车竖向静活载引起的竖向挠度不应超过表6.0.1规定的容许值。\n\n表 6.0.1 梁体竖向挠度的容许值  \n\n<table><tr><td>跨度L(m)</td><td>竖向挠度容许值</td></tr><tr><td>L≤30</td><td>L/2000</td></tr><tr><td>30&lt;L≤60</td><td>L/1500</td></tr><tr><td>60&lt;L≤80</td><td>L/1200</td></tr><tr><td>L&gt;80</td><td>L/1000</td></tr></table>"
+                        },
+                        {
+                            "subsubsection": "6.0.2",
+                            "subsubsection_contents": "拱桥的  $1 / 4$  跨度处，由列车竖向静活载所产生的上下挠度绝对值之和，不宜大于计算跨度的  $1 / 800$"
+                        },
+                        {
+                            "subsubsection": "6.0.3",
+                            "subsubsection_contents": "斜拉桥由列车竖向静活载所产生的梁体竖向挠度不宜大于计算跨度的  $1 / 600$  。列车竖向静活载与公路静活载同时作用下，结构的竖向挠度不宜大于计算跨度的  $1 / 500$"
+                        },
+                        {
+                            "subsubsection": "6.0.4",
+                            "subsubsection_contents": "在列车静活载作用下，有砟轨道桥梁梁体单端竖向转角不应大于  $5\\%$  ，无砟轨道桥梁梁体单端转角不应大于  $3\\%$  。当无砟轨道桥梁梁体单端竖向转角大于  $2\\%$  时，应检算梁端处轨道扣件的上拔力。"
+                        },
+                        {
+                            "subsubsection": "6.0.5",
+                            "subsubsection_contents": "在列车横向摇摆力、离心力、风力和温度力作用下，桥跨结构梁体的横向水平挠度不宜大于计算跨度的  $1 / 4000$ 。"
+                        },
+                        {
+                            "subsubsection": "6.0.6",
+                            "subsubsection_contents": "在计入动力系数的列车活载作用下，桥跨结构整体扭转产生的梁体同一横断面一条线上两根钢轨的竖向变形差不应大于 $6\\mathrm{mm}$  。列车静活载作用下，沿梁纵向  $3\\mathrm{m}$  梁长的局部翘曲变形引起的一条线上两根钢轨的竖向相对变形量  $t$  不应大于  $4.5\\mathrm{mm}$  （图6.0.6）。\n\n图6.0.6 桥面局部翘曲变形示意  \n![](images/a32fcb57107113c99f863816c8280adb4feca724132c7da328bb6b5291c86e02.jpg)  \n$L$  一钢轨间距"
+                        },
+                        {
+                            "subsubsection": "6.0.7",
+                            "subsubsection_contents": "跨度大于  $100\\mathrm{m}$  的桥梁宜按实际运营列车进行车-桥系统或风-车-桥系统耦合振动分析检算，最大检算速度应采用1.2倍的本线最高运营速度，列车走行安全性及乘客乘坐舒适度指标应满足下列公式要求：\n\n脱轨系数：\n\n$$\nQ / P \\leqslant 0. 8 \\tag {6.0.7-1}\n$$\n\n轮重减载率：\n\n$$\n\\Delta P / \\bar {P} \\leqslant 0. 6 \\tag {6.0.7-2}\n$$\n\n车体竖向加速度：\n\n$$\na _ {z} \\leqslant 0. 1 3 g (\\text {半 峰 值}) \\tag {6.0.7-3}\n$$\n\n车体横向加速度：\n\n$$\na _ {\\mathrm {y}} \\leqslant 0. 1 0 g (\\text {半 峰 值}) \\tag {6.0.7-4}\n$$\n\n式中：  $Q$  ——列车轮对一侧车轮的横向力（kN）；\n\n$P$  ——一侧车轮垂直力（kN）；\n\n$\\Delta P$  —一侧车轮轮重减载量（kN）；\n\n$\\overline{P}$  ——车轮的平均轮重  $(\\mathrm{kN})$  ；\n\n$g$  重力加速度  $(\\mathrm{m} / \\mathrm{s}^{2})$"
+                        },
+                        {
+                            "subsubsection": "6.0.8",
+                            "subsubsection_contents": "桥墩刚度的控制应符合下列规定：\n\n1 在最不利荷载作用下，桥墩横向刚度应符合下列规定：\n\n1）当桥梁跨度  $L\\geq 5\\mathrm{m}$  时，桥墩墩顶横向水平位移应满足下式要求：\n\n$$\n\\Delta_ {\\mathrm {h}} \\leqslant 4 \\sqrt {L} \\tag {6.0.8-1}\n$$\n\n式中：  $L$  ——桥梁跨度（m），当为不等跨时采用相邻跨中的较小跨度；\n\n$\\Delta_{\\mathrm{h}}$  ——墩顶横桥向水平位移（mm），包括由于墩身和基础的弹性变形及地基弹性变形的影响。\n\n2）当桥梁跨度  $L < 5\\mathrm{m}$  时，梁缝处水平折角不应大于  $2.5\\%$\n\n2 在最不利荷载作用下，墩顶顺桥向水平位移  $\\Delta_{\\mathrm{s}}$  应符合下列规定：\n\n1）当桥梁跨度  $L\\geq 25\\mathrm{m}$  时，\n\n$$\n\\Delta_ {\\mathrm {s}} \\leqslant 5 \\sqrt {L} \\tag {6.0.8-2}\n$$\n\n2）当桥梁跨度  $L < 25\\mathrm{m}$  时，\n\n$$\n\\Delta_ {\\mathrm {s}} \\leqslant 2 5 \\tag {6.0.8-3}\n$$\n\n式中：  $L$  ——桥梁跨度（m），当为不等跨时采用相邻跨中的较小跨度；\n\n$\\Delta_{\\mathrm{s}}$  ——墩顶横桥向水平位移（mm），包括由于墩身和基础的弹性变形及地基弹性变形的影响。\n\n3 桥上铺设无缝线路且无钢轨伸缩调节器的双线及多线简支梁桥，桥墩的墩顶纵向最小水平线刚度限值应根据梁-轨共同作用计算确定，也可按表6.0.8的规定取值。单线桥梁桥墩纵向水平线刚度宜取用表中数值的0.6倍。\n\n表 6.0.8 桥墩墩顶纵向水平线刚度限值  \n\n<table><tr><td>跨度L(m)</td><td>最小水平线刚度(kN/cm)</td></tr><tr><td>L≤20</td><td>190</td></tr><tr><td>20240</td><td>240</td></tr><tr><td>30320</td><td>320</td></tr></table>\n\n注：不设钢轨伸缩调节器的连续梁，当联长小于列车编组长度时，以联长为跨度，按跨度与  $30\\mathrm{m}$  比增大的比例增大刚度；当联长大于列车长度时，以列车长为跨度，按跨度与  $30\\mathrm{m}$  比增大的比例增大刚度。对于连续刚构桥或设置多个固定支座的连续梁桥，计算其刚度时可取刚构墩的纵向合成刚度。"
+                        }
+                    ],
+                    "subsection_name": "No_NAME"
+                }
+            ],
+            "section_name": "刚度要求"
+        },
+        {
+            "section": "7",
+            "section_contents": [
+                {
+                    "subsection": "7.1",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "7.1.1",
+                            "subsubsection_contents": "梁桥、刚构桥、拱桥及墩台设计除应符合本规范的规定外，尚应符合现行行业标准《铁路桥涵设计规范》TB10002、《铁路桥梁钢结构设计规范》TB10002.2和《铁路桥涵混凝土结构设计规范》TB10092的规定。"
+                        },
+                        {
+                            "subsubsection": "7.1.2",
+                            "subsubsection_contents": "桥梁基础设计和地基的物理力学指标应符合现行行业标准《铁路桥涵地基和基础设计规范》TB10093的规定。"
+                        },
+                        {
+                            "subsubsection": "7.1.3",
+                            "subsubsection_contents": "梁式桥跨结构在最不利组合荷载作用下，横向倾覆稳定系数不应小于1.3。"
+                        },
+                        {
+                            "subsubsection": "7.1.4",
+                            "subsubsection_contents": "桥梁应验算顶梁工况。顶梁验算应满足在荷载作用下桥梁整体和局部构件的安全性。"
+                        },
+                        {
+                            "subsubsection": "7.1.5",
+                            "subsubsection_contents": "当结构自重（包括附加建筑自重）、预加力、前期收缩徐变及静活载引起的竖向挠度大于  $15\\mathrm{mm}$  或跨度的1/1600时，应设置预拱度；预拱度曲线应与结构自重（包括附加建筑自重）、预加力、前期收缩徐变及1/2静活载所产生的挠度曲线基本相同，但方向应相反。"
+                        },
+                        {
+                            "subsubsection": "7.1.6",
+                            "subsubsection_contents": "跨度  $150\\mathrm{m}$  及以下铺设无砟轨道的预应力混凝土梁的后期徐变变形量控制，宜符合下列规定：\n\n1 当桥梁跨度  $L$  小于  $50\\mathrm{m}$  时，徐变变形量不宜大于  $10\\mathrm{mm}$  \n2 当桥梁跨度  $L$  大于或等于  $50\\mathrm{m}$  时，徐变变形量不宜大于 $L / 5000$"
+                        },
+                        {
+                            "subsubsection": "7.1.7",
+                            "subsubsection_contents": "区间桥梁墩台基础的沉降应按恒载计算。计算总沉降量不应大于  $50\\mathrm{mm}$  。对跨度小于或等于  $40\\mathrm{m}$  梁的相邻桥墩，其工后沉降量之差有砟桥面不应超过  $20\\mathrm{mm}$ ，无砟桥面不应超过\n\n$10\\mathrm{mm}$  。对外部超静定结构，其相邻墩台不均匀沉降量之差的容许值还应根据沉降对结构产生的附加影响确定。"
+                        },
+                        {
+                            "subsubsection": "7.1.8",
+                            "subsubsection_contents": "曲线梁桥横向宜设置双支座。"
+                        },
+                        {
+                            "subsubsection": "7.1.9",
+                            "subsubsection_contents": "拱桥应进行单根吊杆失效工况的验算，当单根吊杆失效时，仍应保证双线行车。进行该状态验算时，钢构件和钢筋混凝土构件的容许应力提高系数宜取1.4，预应力混凝土构件的抗裂安全系数宜取1.1，强度安全系数宜取1.6。"
+                        },
+                        {
+                            "subsubsection": "7.1.10",
+                            "subsubsection_contents": "拱桥宜按弹性理论检算整体稳定性，在恒载和活载作用下整体稳定的安全系数不应小于4.0。"
+                        },
+                        {
+                            "subsubsection": "7.1.11",
+                            "subsubsection_contents": "拱肋或拱圈的杆件稳定宜简化为自由长度为  $L_{0}$  的直杆进行验算，其验算方法应根据其材料的不同按现行行业标准《铁路桥涵混凝土结构设计规范》TB10092或《铁路桥梁钢结构设计规范》TB10002.2的规定执行，其中自由长度  $L_{0}$  应按下式计算：\n\n$$\nL _ {0} = \\pi \\sqrt {\\frac {E I}{N _ {\\mathrm {c r}}}} \\tag {7.1.11}\n$$\n\n式中：  $L_{0}$  —自由长度  $(\\mathrm{m})$\n\n$N_{\\mathrm{cr}}$  ——验算平面内的整体失稳一阶模态下的拱肋或拱圈的临界轴力（kN）；\n\n$E$  ——拱肋或拱圈的弹性模量（ $\\mathrm{kPa}$ ）；\n\n$I$  ——拱肋或拱圈截面的惯性矩  $(\\mathrm{m}^4)$  。"
+                        },
+                        {
+                            "subsubsection": "7.1.12",
+                            "subsubsection_contents": "分离式拱肋间横撑的构造及数量应根据稳定性计算确定。箱形断面拱肋（拱圈）在拱顶处、立柱支承处或吊杆连接处，应设置横隔板。"
+                        },
+                        {
+                            "subsubsection": "7.1.13",
+                            "subsubsection_contents": "下承或中承式拱桥的吊杆强度安全系数不应小于3.0。吊杆的应力幅计算值应小于该类型吊杆的容许应力幅。"
+                        },
+                        {
+                            "subsubsection": "7.1.14",
+                            "subsubsection_contents": "斜拉桥拉索的最大使用应力应符合下列规定：\n\n1 钢绞线拉索的最大应力应满足下列规定：\n\n1）当活载应力幅  $\\Delta \\sigma \\leqslant 50\\mathrm{MPa}$  时，\n\n$$\n[ \\sigma ] \\leqslant 0. 6 f _ {\\mathrm {p k}} \\tag {7.1.14-1}\n$$\n\n2）当活载应力幅  $\\Delta \\sigma > 50\\mathrm{MPa}$  时，\n\n$$\n[ \\sigma ] \\leqslant 0. 4 f _ {\\mathrm {p k}} \\tag {7.1.14-2}\n$$\n\n2 平行钢丝拉索的最大应力应满足下列规定：\n\n1）当活载应力幅  $\\Delta \\sigma \\leqslant 70\\mathrm{MPa}$  时，\n\n$$\n[ \\sigma ] \\leqslant 0. 6 f _ {\\mathrm {p k}} \\tag {7.1.14-3}\n$$\n\n2）当活载应力幅  $\\Delta \\sigma > 70\\mathrm{MPa}$  时，\n\n$$\n[ \\sigma ] \\leqslant 0. 4 f _ {\\mathrm {p k}} \\tag {7.1.14-4}\n$$\n\n式中：  $[\\sigma ]$  ——拉索的容许应力（ $\\mathrm{MPa}$ ）；\n\n$f_{\\mathrm{pk}}$  ——拉索的抗拉强度标准值（  $\\mathrm{MPa}$  ）。\n\n3 施工状态拉索的最大容许应力可提高  $25\\%$  ，但不应超过  $0.6f_{\\mathrm{pk}}$  。"
+                        },
+                        {
+                            "subsubsection": "7.1.15",
+                            "subsubsection_contents": "斜拉桥不应采用全漂浮体系。"
+                        },
+                        {
+                            "subsubsection": "7.1.16",
+                            "subsubsection_contents": "斜拉桥应验算单根拉索失效的工况，当单根拉索失效时仍应能满足双线行车的要求，钢构件和钢筋混凝土构件的容许应力提高系数宜采用1.4；预应力混凝土的抗裂安全系数宜采用1.1，强度安全系数宜采用1.6。"
+                        },
+                        {
+                            "subsubsection": "7.1.17",
+                            "subsubsection_contents": "当桥墩可能承受车船、排筏或漂流物撞击时，在外力作用点高度以下部位，不宜采用空心墩。"
+                        },
+                        {
+                            "subsubsection": "7.1.18",
+                            "subsubsection_contents": "桥梁支座宜采用轨道交通标准系列的盆式橡胶支座或球形钢支座，严寒地区及对耐久性有特殊要求的地区宜采用球形钢支座。"
+                        },
+                        {
+                            "subsubsection": "7.1.19",
+                            "subsubsection_contents": "U形梁桥道板的受力宜建立空间有限元模型进行计算，也可按下列公式进行估算：\n\n1 桥道板跨中的横向最大正弯矩  $M_{1}$\n\n$$\nM _ {1} = M _ {0} \\tag {7.1.19-1}\n$$\n\n2 桥道板支点的横向最大正弯矩  $M_2$\n\n$$\nM _ {2} = 0. 2 5 M _ {0} \\tag {7.1.19-2}\n$$\n\n3 桥道板支点的横向最大负弯矩  $M_{3}$\n\n$$\nM _ {3} = 0. 5 M _ {0} \\tag {7.1.19-3}\n$$\n\n式中：  $M_0$  ——以腹板内侧间距为计算跨径的简支板跨中弯矩  $(\\mathrm{kN}\\cdot \\mathrm{m})$  。"
+                        }
+                    ],
+                    "subsection_name": "一般规定"
+                },
+                {
+                    "subsection": "7.2",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "7.2.1",
+                            "subsubsection_contents": "矩形、带翼缘箱形和腹板（肋板）、翼缘板以及顶（底）板组合截面弯扭构件的塑性抵抗矩和截面扭矩应符合下列规定：\n\n1 截面受扭塑性抵抗矩  $W_{\\mathrm{t}}$  、腹板或矩形箱体塑性抵抗矩  $W_{\\mathrm{tw}}$  、翼缘板塑性抵抗矩  $W_{\\mathrm{tf}}$  、组合截面顶（底）板塑性抵抗矩  $W_{\\mathrm{tb}}$  应按本规范附录A.0.1计算；\n\n2 矩形、带翼缘箱形和腹板（肋板）、翼缘板以及顶（底）板组合截面弯扭构件的扭矩分配应按下列公式计算：\n\n$$\nT _ {\\mathrm {w}} = \\frac {W _ {\\mathrm {t w}}}{W _ {\\mathrm {t}}} \\times T \\tag {7.2.1-1}\n$$\n\n$$\nT _ {\\mathrm {f}} = \\frac {W _ {\\mathrm {t f}}}{W _ {\\mathrm {t}}} \\times T \\tag {7.2.1-2}\n$$\n\n$$\nT _ {\\mathrm {b}} = \\frac {W _ {\\mathrm {t b}}}{W _ {\\mathrm {t}}} \\times T \\tag {7.2.1-3}\n$$\n\n式中：  $T$  ——截面扭矩（  $\\mathrm{kN}\\cdot \\mathrm{m}$  ）；\n\n$T_{\\mathrm{w}}$  ——分配给腹板或矩形箱体的扭矩  $(\\mathrm{kN} \\cdot \\mathrm{m})$ ；\n\n$T_{\\mathrm{f}}$  ——分配给翼缘板的扭矩（  $\\mathrm{kN}\\cdot \\mathrm{m}$  ）；\n\n$T_{\\mathrm{b}}$  ——分配给组合截面顶（底）板的扭矩  $(\\mathrm{kN} \\cdot \\mathrm{m})$ ；\n\n$W_{\\mathrm{t}}$  ——截面受扭塑性抵抗矩（  $\\mathrm{m}^3$  ）；\n\n$W_{\\mathrm{tw}}$  ——腹板或矩形箱体的塑性抵抗矩（  $\\mathrm{m}^3$  ）；\n\n$W_{\\mathrm{tf}}$  ——翼缘板的塑性抵抗矩  $(\\mathrm{m}^{3})$\n\n$W_{\\mathrm{tb}}$  ——组合截面顶（底）板的塑性抵抗矩  $(\\mathrm{m}^3)$  。"
+                        },
+                        {
+                            "subsubsection": "7.2.2",
+                            "subsubsection_contents": "矩形、箱形、板肋组合截面弯扭构件纵向钢筋和箍筋计算应符合下列规定：\n\n1 正截面抗弯强度计算应按现行行业标准《铁路桥涵混凝土结构设计规范》TB10092的规定执行；\n\n2 抗扭强度计算所需的纵向钢筋和箍筋面积宜按本规范附录A.0.2计算，并应沿周边均匀对称布置；  \n3 纵向钢筋的总面积为按弯矩计算所得结果与按扭矩计算所得结果的叠加。计算时应取弯矩最大值及其对应扭矩值和扭矩最大值及其对应弯矩值两种情况，并应取计算结果的较大值。"
+                        },
+                        {
+                            "subsubsection": "7.2.3",
+                            "subsubsection_contents": "弯扭构件截面尺寸、抗扭强度以及抗剪强度应符合下列规定：\n\n1 矩形或箱形截面弯扭构件的截面尺寸应符合下式要求：\n\n$$\n\\frac {V}{b h _ {0}} + \\frac {T}{W _ {\\mathrm {t}}} \\leqslant [ \\sigma_ {\\mathrm {t p - 1}} ] \\tag {7.2.3-1}\n$$\n\n式中：  $V$  ——截面计算剪力（kN）；\n\n$T$  ——计算扭矩  $(\\mathrm{kN} \\cdot \\mathrm{m})$ ；\n\n$b$  —垂直于弯矩作用平面的矩形截面宽度或箱形截面腹板总宽度（m）；\n\n$h_0$  —平行于弯矩作用平面的矩形或箱形截面的有效高度（m）；\n\n$W_{\\mathrm{t}}$  ——截面受扭塑性抵抗矩  $(\\mathrm{m}^{3})$ ；\n\n$[\\sigma_{\\mathrm{tp - 1}}]$  ——有箍筋及斜筋时的容许主拉应力（  $\\mathrm{kPa}$  ）。\n\n2 当矩形或箱形截面弯扭构件满足式（7.2.3-2）时，可不进行抗扭、抗剪强度计算，但应按现行行业标准《铁路桥涵混凝土结构设计规范》TB10092的规定配置构造钢筋：\n\n$$\n\\frac {V}{b h _ {0}} + \\frac {T}{W _ {\\mathrm {t}}} \\leqslant [ \\sigma_ {\\mathrm {t p - 2}} ] \\tag {7.2.3-2}\n$$\n\n式中：  $\\left[\\sigma_{\\mathrm{tp - 2}}\\right]$  ——无箍筋及斜筋时的容许主拉应力（kPa）。\n\n3 矩形或箱形截面弯扭构件抗扭强度宜按本规范附录A.0.2的规定计算，抗剪强度宜按现行行业标准《铁路桥涵混凝土结构设计规范》TB10092的规定计算。"
+                        },
+                        {
+                            "subsubsection": "7.2.4",
+                            "subsubsection_contents": "钢筋混凝土牛腿宜按本规范附录B的规定计算。"
+                        },
+                        {
+                            "subsubsection": "7.2.5",
+                            "subsubsection_contents": "桩基承台计算应符合本规范附录C的规定。"
+                        }
+                    ],
+                    "subsection_name": "混凝土结构"
+                },
+                {
+                    "subsection": "7.3",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "7.3.1",
+                            "subsubsection_contents": "以受弯为主的腹板和横隔板的加劲肋尺寸、刚度与间距应符合现行行业标准《铁路桥梁钢结构设计规范》TB10002.2的规定。"
+                        },
+                        {
+                            "subsubsection": "7.3.2",
+                            "subsubsection_contents": "钢结构弯曲受压的正交异性板的有效分布宽度（图7.3.2-1）应符合下列规定：\n\n1 有效分布宽度（图7.3.2-1）应按下列公式计算：\n\n$$\nb _ {\\mathrm {c l}} = \\beta b _ {0 1} \\tag {7.3.2-1}\n$$\n\n$$\nb _ {\\mathrm {e} 2} = \\beta b _ {0 2} \\tag {7.3.2-2}\n$$\n\n式中：  $b_{\\mathrm{el}}$  ——腹板外侧翼缘的有效分布宽度（mm）；\n\n$b_{\\mathrm{c2}}$  ——腹板内侧翼缘的有效分布宽度（mm）；\n\n$b_{01}$  ——腹板外侧翼缘宽度（mm）；\n\n$b_{02}$  ——腹板中心距的一半（mm）；\n\n$\\beta$  ——有效宽度系数，按第7.3.2条第2款取值。\n\n![](images/74cc377efba991bfd2d88d8d21a5debbceb2399fcd8f6ac4a60e157476be2722.jpg)  \n图7.3.2-1 有效宽度分布示意\n\n2 有效宽度系数  $\\beta$  应按表7.3.2的规定计算。\n\n表 7.3.2 有效宽度系数  $\\mathbf{\\beta }$  \n\n<table><tr><td>系数k</td><td>受力状态及位置</td><td>β值</td></tr><tr><td>k≤0.02</td><td>-</td><td>β=1</td></tr><tr><td rowspan=\"2\">0.02&lt;k≤0.70</td><td>正弯矩</td><td>β=β1=1/1+6.4k2</td></tr><tr><td>负弯矩</td><td>β=β2=1/1+6.0(k-1/2500k)+1.6k2</td></tr></table>\n\n续表7.3.2  \n\n<table><tr><td>系数k</td><td>受力状态及位置</td><td>β值</td></tr><tr><td>正弯矩</td><td>β=β1=1/5.9k</td><td></td></tr><tr><td>负弯矩</td><td>β=β2=1/8.6k</td><td></td></tr><tr><td rowspan=\"2\">其他</td><td>端支点处</td><td>β0=(0.55+0.025)/kβ1且β0&lt;β1</td></tr><tr><td>悬臂</td><td>β=β2支承处和尾端</td></tr></table>\n\n1）系数  $k$  应按下列公式计算：\n\n$$\nk = \\frac {a _ {0} b _ {0}}{L _ {\\mathrm {e} , i}} (i = 1, 2, 3, 4) \\tag {7.3.2-3}\n$$\n\n$$\n\\alpha_ {0} = \\sqrt {1 + \\frac {A _ {s l}}{t \\cdot b _ {0}}} \\tag {7.3.2-4}\n$$\n\n式中：  $A_{sl}$  —纵向加劲肋在  $b_{0}$  长度范围内的面积（  $\\mathrm{mm}^2$  ）；\n\n$t$  ——腹板厚度（mm）；\n\n$b_{0}$  ——板件的实际宽度，当计算受压悬臂板时，  $b_{0} = b_{01}$  当计算腹板内侧受压板时，  $b_{0} = b_{02}$\n\n$L_{\\mathrm{c},i}$  ——翼缘有效宽度计算的等效跨径（mm）。\n\n2）翼缘有效宽度计算的等效跨径  $L_{\\mathrm{e},i}$  应按下列公式计算（图7.3.2-2）：\n\n$$\nL _ {\\mathrm {c}, 1} = 0. 8 5 L _ {1} \\tag {7.3.2-5}\n$$\n\n$$\nL _ {\\mathrm {e}, 2} = 0. 2 5 \\left(L _ {1} + L _ {2}\\right) \\tag {7.3.2-6}\n$$\n\n$$\nL _ {\\mathrm {e}, 3} = 0. 7 0 L _ {2} \\tag {7.3.2-7}\n$$\n\n$$\nL _ {\\mathrm {e}, 4} = 2 L _ {3} \\tag {7.3.2-8}\n$$\n\n3 有效宽度系数  $\\beta$  沿梁纵向的分布范围宜符合下列规定（图7.3.2-3）：\n\n1）无悬臂的边支点有效宽度系数为  $\\beta_0$  \n2）边跨跨中有效宽度系数为  $\\beta_{1}$  ，其分布范围为边跨的跨\n\n![](images/61b520249c086ba6b7ced8bf01c001f10c22cf23cc569b525d445412abb6960d.jpg)  \n图7.3.2-2 翼缘有效宽度计算的等效跨径  $L_{\\mathrm{e},i}$\n\n中  $L_{1} / 2$  区域；\n\n3）中支点有效宽度系数为  $\\beta_{2}$  \n4）中跨跨中有效宽度系数为  $\\beta_{1}$  ，其分布范围为中跨的跨中  $L_{2} / 2$  区域；  \n（5）悬臂板跨度  $L_{3}$  范围内的有效宽度系数为  $\\beta_{2}$\n\n![](images/98f9a5388e537dd2dcac455a16e39d1b4fa0e6e783ab24d7dc7ba16e0e1a67cc.jpg)  \n图7.3.2-3 有效宽度系数的分布范围"
+                        },
+                        {
+                            "subsubsection": "7.3.3",
+                            "subsubsection_contents": "均匀受压板件和以受压为主的腹板加劲肋的几何尺寸应符合下列规定：\n\n1 开口加劲肋几何尺寸（图7.3.3-1）应符合下列规定：\n\n1）扁钢加劲肋的宽厚比应满足下式要求：\n\n$$\n\\frac {h _ {\\mathrm {s}}}{t _ {\\mathrm {s}}} \\leqslant 1 2 \\sqrt {\\frac {3 4 5}{\\sigma_ {\\mathrm {s}}}} \\tag {7.3.3-1}\n$$\n\n式中：  $t_{\\mathrm{s}}$  加劲肋腹板厚度（  $\\mathrm{mm}$  ）；\n\n$h_{\\mathrm{s}}$  加劲肋腹板高度（  $\\mathrm{mm}$  ）；\n\n$\\sigma_{s}$  加劲肋的屈服强度（  $\\mathrm{MPa}$  ）。\n\n2）L形、T形钢加劲肋的尺寸比例应满足下列公式要求：\n\n$$\n\\frac {b _ {\\mathrm {s 0}}}{t _ {\\mathrm {s 0}}} \\leqslant 1 2 \\sqrt {\\frac {3 4 5}{\\sigma_ {\\mathrm {s}}}} \\tag {7.3.3-2}\n$$\n\n$$\n\\frac {h _ {\\mathrm {s}}}{t _ {\\mathrm {s}}} \\leqslant 3 0 \\sqrt {\\frac {3 4 5}{\\sigma_ {\\mathrm {s}}}} \\tag {7.3.3-3}\n$$\n\n式中：  $t_{\\mathrm{so}}$  ——L形、T形加劲肋底板厚度（mm）；\n\n$b_{\\mathrm{s0}}$  ——L形、T形加劲肋底板边缘到腹板的净宽度（mm）。\n\n![](images/c4ad9088548afc08588c4b85e2e7ee64b51a9b09795f0e5e4eeaadd6475ab237.jpg)  \n图7.3.3-1 加劲肋尺寸符号\n\n2 闭口加劲肋几何尺寸（图7.3.3-2）应满足下列公式要求：\n\n![](images/ca856ae3bd0750614b8aadb341040508691d3931e843ece51e8ae05e204a9f51.jpg)  \n图7.3.3-2 加劲肋尺寸符号\n\n$$\n\\frac {b _ {\\mathrm {s}}}{t _ {\\mathrm {s}}} \\leqslant 4 0 \\sqrt {\\frac {3 4 5}{\\sigma_ {\\mathrm {s}}}} \\tag {7.3.3-4}\n$$\n\n$$\n\\frac {h _ {\\mathrm {s}}}{t _ {\\mathrm {s}}} \\leqslant 4 0 \\sqrt {\\frac {3 4 5}{\\sigma_ {\\mathrm {s}}}} \\tag {7.3.3-5}\n$$\n\n$$\n\\frac {t _ {\\mathrm {s}} b ^ {3}}{t _ {\\mathrm {d}} ^ {3} h _ {\\mathrm {s}}} \\leqslant 4 0 0 \\tag {7.3.3-6}\n$$\n\n式中：  $t_{\\mathrm{d}}$  ——桥面板厚度（mm）；\n\n$b$  加劲肋腹板上口宽度（  $\\mathrm{mm}$  ）；\n\n$b_{\\mathrm{s}}$  加劲肋腹板下口宽度（mm）；\n\n$t_{\\mathrm{s}}$  ——加劲肋腹板厚度（mm）；\n\n$h_{\\mathrm{s}}$  —加劲肋腹板斜向高度（mm）。"
+                        },
+                        {
+                            "subsubsection": "7.3.4",
+                            "subsubsection_contents": "均匀受压板件和以受压为主的腹板纵向加劲肋的刚度宜满足下列公式的要求：\n\n$$\nI _ {l} \\geqslant \\frac {b t ^ {3}}{1 2 (1 - \\nu^ {2})} \\gamma \\tag {7.3.4-1}\n$$\n\n$$\n\\gamma = \\left\\{ \\begin{array}{l l} \\frac {1}{n} \\left[ 4 n ^ {2} (1 + n \\delta_ {1}) \\alpha^ {2} r ^ {2} - (\\alpha^ {2} + 1) ^ {2} \\right] & (\\alpha \\leqslant \\alpha_ {0}) \\\\ \\frac {1}{n} \\left\\{\\left[ 2 n ^ {2} (1 + n \\delta_ {l}) - 1 \\right] ^ {2} r ^ {2} - 1 \\right\\} & (\\alpha \\leqslant \\alpha_ {0}) \\end{array} \\right. \\tag {7.3.4-2}\n$$\n\n$$\nn = n _ {l} + 1 \\tag {7.3.4-3}\n$$\n\n$$\n\\alpha = a / b \\tag {7.3.4-4}\n$$\n\n$$\n\\alpha_ {0} = \\sqrt [ 4 ]{1 + n \\gamma_ {l}} \\tag {7.3.4-5}\n$$\n\n$$\n\\gamma_ {l} = \\frac {I _ {l} \\times 1 2 (1 - v ^ {2})}{b t ^ {3}} \\tag {7.3.4-6}\n$$\n\n$$\nt _ {0} = \\left\\{ \\begin{array}{l l} \\frac {b}{2 8 n} (\\text {当 加 劲 板 为 Q 2 3 5 时}) \\\\ \\frac {b}{2 2 n} (\\text {当 加 劲 板 为 Q 3 4 5 、 Q 3 7 0 或 Q 4 2 0 时}) \\end{array} \\right. \\tag {7.3.4-7}\n$$\n\n$$\nr = \\frac {t _ {0}}{t} \\tag {7.3.4-8}\n$$\n\n$$\n\\delta_ {l} = A _ {l} / b t \\tag {7.3.4-9}\n$$\n\n式中：  $I_{l}$  —纵向单根加劲肋对被加劲板的抗弯惯性矩（  $\\mathrm{mm}^4$  ）；\n\n$n$  ——被加劲肋分隔的局部板件数目；\n\n$n_{l}$  ——纵向加劲肋数目；\n\n$\\alpha$  ——被加劲板长宽比；\n\n$a$  ——被加劲板长度（横隔板或横框间距）  $(\\mathrm{mm})$\n\n$b$  ——被加劲板宽度（加劲肋位置处的腹板或纵隔板之间的距离）  $(\\mathrm{mm})$  ；\n\n$\\alpha_{0}$  ——被加劲板长宽比限值；\n\n$\\gamma_{l}$  ——加劲肋的抗弯刚度比；\n\n$t$  ——被加劲板厚度（mm）；\n\n$t_0$  不考虑加劲板局部稳定容许应力折减时的最小板厚（mm）；\n\n$r$  ——被加劲板厚度修正系数，且不大于1.0；\n\n$\\delta_{l}$  ——单根加劲肋的截面面积与被加劲板的面积之比；\n\n$A_{l}$  ——单根加劲肋的截面面积（ $\\mathrm{mm}^2$ ）；\n\n泊松比。"
+                        },
+                        {
+                            "subsubsection": "7.3.5",
+                            "subsubsection_contents": "承受动荷载的结构构件及其连接除正交异性板可按本规范附录D的规定进行疲劳检算外，其余构件应按现行行业标准《铁路桥梁钢结构设计规范》TB10002.2的规定进行疲劳检算。"
+                        }
+                    ],
+                    "subsection_name": "钢结构"
+                },
+                {
+                    "subsection": "7.4",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "7.4.1",
+                            "subsubsection_contents": "钢-混凝土结合梁应按容许应力法设计，混凝土板的设计和钢梁的设计应符合本规范第7.1.1条的规定。"
+                        },
+                        {
+                            "subsubsection": "7.4.2",
+                            "subsubsection_contents": "钢-混凝土结合梁设计应根据受力阶段和钢梁与混凝土桥面板的结合状态对结构的安全性进行验算，并应满足结构在达到强度破坏之前，钢结构不发生局部失稳。"
+                        },
+                        {
+                            "subsubsection": "7.4.3",
+                            "subsubsection_contents": "抗剪连接件应能承担钢梁和混凝土桥面板之间的水平剪力，同时应能抵抗混凝土桥面板与钢梁间的掀起作用。"
+                        },
+                        {
+                            "subsubsection": "7.4.4",
+                            "subsubsection_contents": "当采用换算截面计算变形、内力和应力时，截面特性的取值应符合下列规定：\n\n1 应采用将钢筋混凝土板换算成钢截面的换算截面法，换算时钢与混凝土弹性模量比  $n$  值应根据荷载类型的不同分别按表7.4.4的规定采用，换算前后混凝土桥面板重心位置应保持不变；\n\n表 7.4.4 弹性模量比  $n$  \n\n<table><tr><td>荷载类型</td><td>恒载</td><td>活载</td><td>温度</td><td>收缩、徐变</td></tr><tr><td>n</td><td>15</td><td>7</td><td>10</td><td>15</td></tr></table>\n\n2 应力计算时，混凝土板的高度应采用全高度；  \n3 变形计算时，应计算剪力键的滑移效应，若不做计算，刚度折减系数可取0.85；  \n4 连续梁宜先按全截面计算内力，当混凝土桥面板的拉应力大于混凝土极限抗拉强度  $f_{\\mathrm{ct}}$  时，应重新计算结构内力；重新计算时，其负弯矩区的截面特性计算应只计入混凝土桥面板内的纵向受拉钢筋。当支座间相邻跨的短长跨比均大于0.6时，每个中支点两侧的负弯矩区段可取为该跨的0.15倍跨径。"
+                        },
+                        {
+                            "subsubsection": "7.4.5",
+                            "subsubsection_contents": "应力验算时，截面有效宽度计算应符合下列规定：\n\n1 简支梁的跨中截面及连续梁的跨中和中支点截面的桥面板有效宽度  $b_{\\mathrm{c}}$  （图7.4.5-1）应按下列公式计算：\n\n![](images/8ad2f06f5a4619037c9ef013d49c9a4bb41c39fde6ea46ecc2d5c46b6e6ba8fc.jpg)  \n图7.4.5-1 截面有效宽度  $b_{\\mathrm{e}}$\n\n边板：  $b_{\\mathrm{e}} = b_{0} + b_{\\mathrm{e1}} + b_{\\mathrm{e2}}$  (7.4.5-1)\n\n中板：  $b_{\\mathrm{e}} = b_{0} + 2b_{\\mathrm{e2}}$  (7.4.5-2)\n\n$$\nb _ {\\mathrm {e l}} = \\frac {L _ {\\mathrm {e i}}}{8} \\leqslant b _ {1} \\tag {7.4.5-3}\n$$\n\n$$\nb _ {\\mathrm {e} 2} = \\frac {L _ {\\mathrm {e} i}}{8} \\leqslant b _ {2} \\tag {7.4.5-4}\n$$\n\n式中：  $b_{0}$  ——外侧抗剪连接件中心距（m）；\n\n$b_{\\mathrm{el}}$  ——腹板外侧桥面板有效宽度（m）；\n\n$b_{\\mathrm{e2}}$  ——腹板内侧桥面板有效宽度（m）；\n\n$b_{1}$  ——外侧抗剪连接件中心至悬臂板边缘的距离（m）；\n\n$b_{2}$  ——相邻钢梁腹板外侧抗剪连接件中心距的一半（m）；\n\n$L_{1}$  ——简支梁计算跨径或连续梁边跨计算跨径（m）；\n\n$L_{2}$  ——连续梁中跨计算跨径（m）；\n\n$L_{ei}$  等效跨径（m），验算简支梁截面时取计算跨径  $L_{\\mathrm{el}}$ $= L_{1}$  ，验算连续梁边跨跨中截面时取  $L_{\\mathrm{e2}} = 0.85L_{1}$  ，验算连续梁中支点截面时取  $L_{\\mathrm{e3}} = 0.25$ $(L_{1} + L_{2})$  ，验算连续梁中跨跨中截面时取  $L_{\\mathrm{el}} = 0.70L_{2}$  （图7.4.5-2）。\n\n![](images/42c5b754beda16fea270919ea5ea4550b6d803caa1426499a5aefea73c0f9610.jpg)  \n图7.4.5-2 等效跨径\n\n2 简支梁的支点截面和连续梁的边支点截面的桥面板有效宽度  $b_{\\mathrm{e}}$  宜按下列公式计算：\n\n边板：  $b_{\\mathrm{e}} = b_{0} + \\beta_{1}b_{\\mathrm{e}1} + \\beta_{2}b_{\\mathrm{e}2}$  (7.4.5-5)\n\n中板：  $b_{\\mathrm{e}} = b_{0} + 2\\beta_{2}b_{\\mathrm{e2}}$  (7.4.5-6)\n\n$$\n\\beta_ {1} = 0. 5 5 + 0. 0 2 5 \\frac {L _ {\\mathrm {e i}}}{b _ {1}} \\tag {7.4.5-7}\n$$\n\n$$\n\\beta_ {2} = 0. 5 5 + 0. 0 2 5 \\frac {L _ {\\mathrm {e i}}}{b _ {2}} \\tag {7.4.5-8}\n$$\n\n3 截面有效宽度沿梁纵向的分布范围（图7.4.5-3）宜符合下列规定：\n\n1）边支点截面有效宽度  $b_{\\mathrm{e - 0}}$  应按式（7.4.5-5）、（7.4.5-6）\n\n计算：\n\n2）边跨跨中截面有效宽度  $b_{\\mathrm{e - 1}}$  应按式（7.4.5-1）计算，其分布范围为边跨的跨中  $L_{1} / 2$  区域；  \n3）中支点截面有效宽度  $b_{\\mathrm{c - 2}}$  应按式（7.4.5-2）计算；  \n4）中跨跨中截面有效宽度  $b_{\\mathrm{e - 3}}$  应按式（7.4.5-2）计算，其分布范围为中跨的跨中  $L_{2} / 2$  区域。\n\n![](images/e68622a47ff8a9ac0975f6909076aa41a6c11cca84c08c53323a6bb80b4216a6.jpg)  \n图7.4.5-3 截面有效宽度沿梁纵向的分布范围"
+                        },
+                        {
+                            "subsubsection": "7.4.6",
+                            "subsubsection_contents": "钢梁剪应力验算时，截面的竖向剪力宜由钢梁腹板单独承担。"
+                        },
+                        {
+                            "subsubsection": "7.4.7",
+                            "subsubsection_contents": "桥面板的横向计算应符合下列规定：\n\n1 计算跨度应为钢梁中心距；  \n2 支点剪力应取钢梁翼缘板端部对应截面处的剪力。"
+                        },
+                        {
+                            "subsubsection": "7.4.8",
+                            "subsubsection_contents": "同一截面钢梁与混凝土板之间的纵向水平剪力应由各抗剪连接件平均承担，剪力连接件数量应按单位梁长的纵向水平剪力包络图计算，并宜沿纵向分段均匀布置。单位梁长的纵向水平剪力包络值应按下式计算：\n\n$$\nV _ {l \\mathrm {d}} = V _ {l \\mathrm {d} 1} + V _ {l \\mathrm {d} 2} + V _ {l \\mathrm {d} 3} \\tag {7.4.8}\n$$\n\n式中：  $V_{\\mathrm{td}}$  ——单位梁长的纵向水平剪力包络值（  $\\mathrm{N / m}$  ）；\n\n$V_{\\mathrm{ldl}}$  ——结合面上除混凝土收缩、徐变变形、温差以及预应力束集中锚固力以外的外荷载产生的竖向剪力引起的单位梁长的纵向水平剪力（  $\\mathrm{N / m}$  ），按本规范第7.4.9条计算；\n\n$V_{td2}$  ——结合面上由于混凝土收缩、徐变变形及温差引起的单位梁长的纵向水平剪力（ $\\mathrm{N / m}$ ），按本规范第7.4.10条计算：\n\n$V_{\\mathrm{d3}}$  ——结合面上由于预应力束集中锚固力引起的单位梁长的纵向水平剪力（  $\\mathrm{N / m}$  ），按本规范第7.4.11条计算。"
+                        },
+                        {
+                            "subsubsection": "7.4.9",
+                            "subsubsection_contents": "结合面上外荷载产生的竖向剪力引起单位梁长的纵向水平剪力，应按下式计算：\n\n$$\nV _ {l \\mathrm {d l}} = \\Sigma \\frac {V _ {\\mathrm {d i}} S _ {i}}{I _ {i}} \\tag {7.4.9}\n$$\n\n式中：  $V_{di}$  ——不同荷载类型作用于结合梁上产生的竖向剪力（N）；\n\n$S_{i}$  ——不同荷载类型下，混凝土截面对换算截面重心轴的面积矩  $(\\mathrm{m}^{3})$ ；\n\n$I_{i}$  ——不同荷载类型下，换算截面惯性矩（ $\\mathrm{m}^4$ ）（负弯矩区混凝土按未开裂截面计算）。"
+                        },
+                        {
+                            "subsubsection": "7.4.10",
+                            "subsubsection_contents": "结合面上由混凝土收缩、徐变变形及温差产生的单位梁长的水平剪力  $V_{td2}$  计算应符合下列规定：\n\n1 结合面上由混凝土收缩、徐变变形及温差产生的纵向水平剪力  $V_{s}$ ，宜按梁的竖向等效温差效应计算。其中，混凝土收缩作用的等效温差，对于预制板，可按桥面板温度降低  $5^{\\circ}C$  计算，对于现浇板，可按桥面板温度降低  $15^{\\circ}C$  计算；混凝土的徐变作用，应先根据混凝土桥面板形心处的恒载应力计算出徐变应变，再转换为产生同等应变的等效温差进行计算。\n\n2  $V_{\\mathrm{s}}$  应由梁端部长度  $l_{\\mathrm{cs}}$  范围内的连接件承受，并应假定在梁端至  $l_{\\mathrm{cs}}$  范围内线性递减分布（图7.4.10）。\n\n![](images/d8c1ffc94fa00055321b80c334a37e2b0c37c70f97f3a5c97a5b1fff983917c5.jpg)  \n图7.4.10  $V_{\\mathrm{td2}}$  沿纵桥向变化图\n\n3 结合面上由混凝土收缩、徐变变形及温差产生的单位梁长的纵向水平剪力  $V_{\\mathrm{d2}}$  应按下式计算：\n\n$$\nV _ {l \\mathrm {d} 2} = \\frac {2 V _ {\\mathrm {s}}}{l _ {\\mathrm {c s}}} \\tag {7.4.10}\n$$\n\n式中：  $V_{\\mathrm{s}}$  ——由混凝土收缩、徐变变形及温差产生的纵向水平剪力（N）；\n\n$l_{\\mathrm{cs}}$  ——由混凝土收缩、徐变变形及温差引起的纵向水平剪力的计算传递长度（m）。\n\n4 计算传递长度  $l_{\\mathrm{cs}}$  应取主梁腹板间距和主梁等效计算跨度的1/10中的较小值。  \n5 对于超静定结构，混凝土收缩、徐变变形及温差产生的支座次反力引起的单位梁长的纵向水平剪力，宜按本规范第7.4.9条计算。"
+                        },
+                        {
+                            "subsubsection": "7.4.11",
+                            "subsubsection_contents": "结合面上由于预应力束集中锚固力引起的单位梁长的纵向水平剪力  $V_{td3}$  计算应符合下列规定：\n\n1 对于先形成结合面后张拉预应力筋的结合梁，结合面上由于预应力束集中锚固力引起的水平剪力可由梁端一倍结合梁梁高  $h$  长度范围内的连接件承受，并假定在锚固端至  $h$  长度范围内线性递减分布。锚固端处的单位梁长纵向水平剪力  $V_{\\mathrm{td3}}$  应按下式计算：\n\n$$\nV _ {\\mathrm {d} 3} = V _ {\\mathrm {p}} \\tag {7.4.11}\n$$\n\n式中：  $V_{\\mathrm{p}}$  ——换算截面上，由预应力集中锚固力引起钢梁截面应力的代数和（N）。\n\n2 对于超静定结构，预应力产生的支座次反力等引起的单位梁长的纵向水平剪力，宜按本规范第7.4.9条的规定进行计算。"
+                        },
+                        {
+                            "subsubsection": "7.4.12",
+                            "subsubsection_contents": "结合梁的抗剪连接件宜采用焊钉或开孔钢板连接件。"
+                        },
+                        {
+                            "subsubsection": "7.4.13",
+                            "subsubsection_contents": "焊钉抗剪能力计算应符合下列规定：\n\n1 单个焊钉的容许剪力宜为  $0.5N_{\\mathrm{v}}^{\\mathrm{c}}$  \n2  $N_{\\mathrm{v}}^{\\mathrm{c}}$  宜取下列公式中的较小值：\n\n1）当发生焊钉剪切破坏时：\n\n$$\nN _ {\\mathrm {v}} ^ {\\mathrm {c}} = 0. 7 A _ {\\mathrm {s}} f \\tag {7.4.13-1}\n$$\n\n2）当发生混凝土压碎破坏时：\n\n$$\nN _ {\\mathrm {v}} ^ {\\mathrm {c}} = 0. 4 3 A _ {\\mathrm {s}} \\sqrt {E _ {\\mathrm {c}} f _ {\\mathrm {c}}} \\tag {7.4.13-2}\n$$\n\n式中：  $N_{\\mathrm{v}}^{\\mathrm{c}}$  ——单个焊钉连接件抗剪强度（N）；\n\n$A_{\\mathrm{s}}$  ——焊钉钉杆的截面面积（  $\\mathrm{mm}^2$  ）；\n\n$E_{\\mathrm{c}}$  ——混凝土弹性模量（  $\\mathrm{MPa}$  ）；\n\n$f_{\\mathrm{c}}$  ——混凝土抗压极限强度（MPa）；\n\n$f$  ——焊钉材料抗拉强度（ $\\mathrm{MPa}$ ），不大于  $400\\mathrm{MPa}$ 。"
+                        },
+                        {
+                            "subsubsection": "7.4.14",
+                            "subsubsection_contents": "开孔钢板连接件抗剪能力应按下列规定进行计算：\n\n1 开孔钢板连接件的单孔容许剪力为  $0.25N_{\\mathrm{v}}^{\\mathrm{c}}$  \n2  $N_{\\mathrm{v}}^{\\mathrm{c}}$  应取下列公式中的较小值：\n\n$$\n\\begin{array}{l} N _ {\\mathrm {v}} ^ {\\mathrm {c}} = 1. 8 5 \\left[ \\frac {\\pi \\left(d _ {1} ^ {2} - d _ {2} ^ {2}\\right) f _ {\\mathrm {c}}}{4} + \\frac {\\pi \\cdot d _ {2} ^ {2} f _ {\\mathrm {s}}}{4} \\right] - 1 0 6 1 0 0 (2 3 4 0 0 \\\\ \\leqslant N _ {\\mathrm {v}} ^ {\\mathrm {c}} \\leqslant 5 9 6 9 0 0) (7.4.14-1) \\\\ N _ {\\mathrm {v}} ^ {\\mathrm {c}} = \\frac {5}{3} \\cdot \\frac {f _ {\\mathrm {y}}}{\\sqrt {3}} A _ {\\mathrm {s}} (7.4.14-2) \\\\ \\end{array}\n$$\n\n式中：  $N_{\\mathrm{v}}^{\\mathrm{c}}$  ——开孔钢板连接件的单孔抗剪承载力（N）；\n\n$d_{1}$  ——开孔板孔洞直径（ $\\mathrm{mm}$ ）；\n\n$d_{2}$  ——横向贯通钢筋直径（ $\\mathrm{mm}$ ）；\n\n$A_{\\mathrm{s}}$  ——两个相邻开孔间钢板的面积（mm）；\n\n$f_{\\mathrm{c}}$  ——混凝土轴心抗压极限强度（  $\\mathrm{MPa}$  ）；\n\n$f_{\\mathrm{s}}$  ——贯通钢筋抗拉计算强度（  $\\mathrm{MPa}$  ）；\n\n$f_{\\mathrm{y}}$  ——钢板的屈服强度（  $\\mathrm{MPa}$  ）。"
+                        }
+                    ],
+                    "subsection_name": "钢-混凝土结合梁"
+                },
+                {
+                    "subsection": "7.5",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "7.5.1",
+                            "subsubsection_contents": "U形梁的构造应符合下列规定：\n\n1 单线梁桥面板厚度不应小于  $25\\mathrm{cm}$  \n2 梁端部应设置和桥面板构成整体的端横梁。"
+                        },
+                        {
+                            "subsubsection": "7.5.2",
+                            "subsubsection_contents": "弯扭构件的纵向钢筋应符合下列规定：\n\n1 梁内受扭纵向钢筋的最小配筋率  $\\rho_{\\mathrm{min}}$  和纵向钢筋的最小面积  $A_{\\mathrm{stl}}$  应按下列公式计算：\n\n$$\n\\rho_ {\\mathrm {m i n}} = 0. 3 5 \\sqrt {\\frac {T}{V b}} \\frac {f _ {\\mathrm {c t}}}{f _ {\\mathrm {s}}} (\\text {当} \\frac {T}{V b} > 2. 0 \\text {时 ， 取} \\frac {T}{V b} = 2. 0) \\tag {7.5.2-1}\n$$\n\n$$\nA _ {\\mathrm {s t l}} = \\rho_ {\\min } b h \\tag {7.5.2-2}\n$$\n\n式中：  $\\rho_{\\mathrm{min}}$  —扭纵向钢筋的最小配筋率；\n\n$A_{\\mathrm{stl}}$  —纵向钢筋的最小面积（  $\\mathrm{m}^2$  ）\n\n$T$  ——截面计算扭矩  $(\\mathrm{kN} \\cdot \\mathrm{m})$ ；\n\n$V$  ——截面计算剪力（kN）；\n\n$b$  ——截面宽度（m），按本规范附录A的规定取值；\n\n$h$  ——截面高度（m），按本规范附录A的规定取值；\n\n$f_{\\mathrm{ct}}$  ——混凝土轴心抗拉极限强度（  $\\mathrm{MPa}$  ）；\n\n$f_{\\mathrm{s}}$  ——普通钢筋抗拉计算强度（  $\\mathrm{MPa}$  ）。\n\n2 受扭纵向钢筋除应在梁截面四角设置外，其余宜沿截面周边均匀对称布置，间距不应大于  $200\\mathrm{mm}$  及梁截面短边长度。受扭纵向钢筋的锚固要求应与受拉钢筋相同。"
+                        },
+                        {
+                            "subsubsection": "7.5.3",
+                            "subsubsection_contents": "钢箱梁应设置进入箱内的检修通道，人孔宽度不宜小于 $400\\mathrm{mm}$  、高度不宜小于  $600\\mathrm{mm}$  ，箱内应设置排水孔。当箱梁尺寸不满足开孔的要求时，箱梁应全封闭。"
+                        },
+                        {
+                            "subsubsection": "7.5.4",
+                            "subsubsection_contents": "正交异性板的构造（图7.5.4）宜符合表7.5.4规定。\n\n表 7.5.4 正交异性板的构造(mm)  \n\n<table><tr><td>项目</td><td>开口截面加劲肋</td><td>闭口截面加劲肋</td></tr><tr><td>桥面板厚度td</td><td>td≥14</td><td>td≥14</td></tr><tr><td>加劲肋间距e1</td><td>el≤400</td><td>600≤e1≤900</td></tr><tr><td>第一个加劲肋与腹板的距离e11</td><td>el≤e11≤1.2e1</td><td>el≤e11≤1.2e1</td></tr><tr><td>横隔板间距eg</td><td>eg≤2700</td><td>2500≤eg≤3500</td></tr><tr><td>加劲肋高度和横隔板高度比</td><td>hjl/hgb≤0.5</td><td>hjl/hgb≤0.4</td></tr></table>\n\n续表7.5.4  \n\n<table><tr><td>项目</td><td>开口截面加劲肋</td><td>闭口截面加劲肋</td></tr><tr><td>加劲肋板厚ts</td><td>ts≥10</td><td>6≤ts≤10</td></tr><tr><td>横隔板腹板板厚tgi</td><td>tg≥10</td><td>10≤tg≤20</td></tr><tr><td>横隔板翼缘板厚tgv</td><td>tg≥10</td><td>tg≥10</td></tr></table>\n\n![](images/b940137a188e5d14558c401962504053643244375913dab205b26918f8612ed0.jpg)  \n图7.5.4 横隔板构造"
+                        },
+                        {
+                            "subsubsection": "7.5.5",
+                            "subsubsection_contents": "正交异性板纵向加劲肋的构造应符合下列规定：\n\n1 纵向加劲肋宜连续穿过横隔板；  \n2 闭口纵向加劲肋与桥面板焊接熔透深度不应小于加劲肋板厚的  $80\\%$  \n3 纵向加劲肋与顶板焊缝焊接后，宜将横向加劲肋或横隔板交叉处的过焊孔用熔透焊封闭；  \n4 闭口纵向加劲肋应在端部设封闭板。"
+                        },
+                        {
+                            "subsubsection": "7.5.6",
+                            "subsubsection_contents": "钢箱梁翼缘板应符合下列规定：\n\n1 受拉翼缘板应按构造设置纵向加劲肋，间距不应大于50倍的板厚；  \n2 箱梁受压翼缘的伸出肢宽不宜大于其板厚度的12倍，受拉翼缘的伸出肢宽不宜大于其板厚度的16倍。"
+                        },
+                        {
+                            "subsubsection": "7.5.7",
+                            "subsubsection_contents": "钢箱梁横隔板应符合下列规定：\n\n1斜拉索或吊杆锚固点处，横隔板与腹板和顶板的焊缝应熔透；  \n2 对不承受集中荷载作用的横隔板与底板，可采用角焊缝连接。"
+                        },
+                        {
+                            "subsubsection": "7.5.8",
+                            "subsubsection_contents": "结合梁混凝土桥面板的厚度  $h_{\\mathrm{cl}}$  不宜小于  $200\\mathrm{mm}$  。应根据需要设置承托（图7.5.8），承托构造应符合下列规定：\n\n1 承托高度  $h_{\\mathrm{c2}}$  不宜大于混凝土桥面板厚度  $h_{\\mathrm{cl}}$  的1.5倍；\n\n2 承托顶的宽度  $b_{0}$  不宜小于钢梁上翼缘宽度  $b_{\\mathrm{t}}$  与1.5倍承托高度  $h_{c2}$  之和；\n\n3 承托边至抗剪连接件外侧的距离  $b_{1}$  不应小于  $40\\mathrm{mm}$\n\n4 抗剪连接件根部与承托顶点的连线与钢梁上翼缘的夹角  $\\beta$  应小于  $45^{\\circ}$\n\n5 承托中横向钢筋下部水平段与钢梁上翼缘的距离  $h_{\\mathrm{c4}}$  不应大于  $50\\mathrm{mm}$\n\n6 抗剪连接件抗掀起端底面高出横向钢筋的距离  $h_3$  不得小于  $30\\mathrm{mm}$ ；横向钢筋间距不应大于  $4h_3$ ，且不应大于  $600\\mathrm{mm}$ 。\n\n图7.5.8 结合梁承托构造  \n![](images/d26ffabb7df08d27acf93995bdcb9ec288b6220d7ea6293130da1e33e844b750.jpg)  \n1—桥面板；2—承托；3—钢梁；4—抗剪连接件；  \n5—横向钢筋"
+                        },
+                        {
+                            "subsubsection": "7.5.9",
+                            "subsubsection_contents": "结合梁边梁混凝土桥面板的构造应符合下列规定：\n\n1 设置承托（图7.5.9-1）时，混凝土桥面板伸出钢梁上翼缘边的距离  $b_{c2}$  不宜小于承托高度  $h_{c2}$  \n2 未设置承托（图7.5.9-2）时，混凝土桥面板边缘与钢梁中心线的距离  $b_{\\mathrm{cl}}$  不应小于  $150\\mathrm{mm}$ ，且与钢梁上翼缘边缘的距离  $b_{\\mathrm{c2}}$  不应小于  $50\\mathrm{mm}$ 。\n\n![](images/0b4ca67aaaabfb6778a4dd12a2dd184f9d16dfcb49b36ee0937d71ff379953f3.jpg)  \n图7.5.9-1 结合梁边梁有承托的构造 1—桥面板；2—承托；3—钢梁\n\n![](images/7a50a82fee250373ba6afa71cc142724702fbdc921b99e9a8750effc807523d2.jpg)  \n图7.5.9-2 结合梁边梁无承托的构造1—桥面板；2—钢梁"
+                        },
+                        {
+                            "subsubsection": "7.5.10",
+                            "subsubsection_contents": "结合梁负弯矩区钢筋混凝土桥面板纵向受拉钢筋截面配筋率不宜小于  $1.5\\%$"
+                        },
+                        {
+                            "subsubsection": "7.5.11",
+                            "subsubsection_contents": "结合梁中与混凝土结合的钢梁上翼缘宽度不应小于  $250\\mathrm{mm}$ ，并不应大于其厚度的24倍。"
+                        },
+                        {
+                            "subsubsection": "7.5.12",
+                            "subsubsection_contents": "结合梁抗剪连接件的设置应符合下列规定：\n\n1 连接件沿梁跨度方向的最大间距不应大于混凝土桥面板（包括承托）厚度的4倍，且不应大于  $400\\mathrm{mm}$  \n2 连接件的外侧边缘与钢梁上翼缘边缘之间的距离不应小于  $20\\mathrm{mm}$  \n3 连接件的外侧边缘与混凝土桥面板边缘间的距离不应小于  $100\\mathrm{mm}$  \n4 连接件顶面的混凝土保护层厚度不应小于  $15\\mathrm{mm}$"
+                        },
+                        {
+                            "subsubsection": "7.5.13",
+                            "subsubsection_contents": "结合梁焊钉连接件除应符合本规范第7.5.12条的规定\n\n外，尚应符合下列规定：\n\n1 焊钉连接件的直径不宜小于  $19\\mathrm{mm}$  ；焊钉连接件钉头下表面高出桥面板底部钢筋顶面不宜小于  $30\\mathrm{mm}$  \n2 当焊钉位置不正对钢梁腹板时，如钢梁上翼缘承受拉力，则焊钉杆直径不应大于钢梁上翼缘厚度的1.5倍；如钢梁上翼缘不承受拉力，则焊钉杆直径不应大于钢梁上翼缘厚度的2.5倍；  \n3 焊钉长度不应小于其杆径的4倍；  \n4 焊钉沿梁轴线方向的间距不应小于杆径的6倍；垂直于梁轴线方向的间距不应小于杆径的4倍。"
+                        },
+                        {
+                            "subsubsection": "7.5.14",
+                            "subsubsection_contents": "结合梁开孔钢板连接件除应符合本规范第7.5.12条的规定外，尚应符合下列规定：\n\n1 开孔板连接件的钢板厚度不宜小于  $12\\mathrm{mm}$  \n2 开孔板连接件的孔径应大于孔中贯通钢筋直径与混凝土骨料最大粒径之和；  \n3 相邻两孔的中心距不宜大于  $500\\mathrm{mm}$  \n4 当开孔板连接件多列布置时，相邻开孔板连接件的间距不宜小于开孔板高的3倍；  \n5 横向贯通钢筋直径不宜大于开孔直径的  $1 / 2$  ，且其直径不宜小于  $12\\mathrm{mm}$"
+                        },
+                        {
+                            "subsubsection": "7.5.15",
+                            "subsubsection_contents": "承台的构造要求除应符合现行行业标准《铁路桥涵地基和基础设计规范》TB10093有关的规定外，尚应符合下列规定：\n\n1 桩基承台的厚度宜为桩直径的1.5倍  $\\sim 2.0$  倍，且不宜小于  $1.5\\mathrm{m}$  \n2 承台宜采用六面配筋，底面钢筋的设置应根据受力计算确定；顶面钢筋的直径不应小于  $16\\mathrm{mm}$  、间距不应大于  $150\\mathrm{mm}$  其余四面应按构造要求配筋；  \n3 承台与桩的连接，钻（挖）孔桩桩顶2.5倍～3.0倍桩径长度范围内应加密箍筋，其间距不应大于  $100\\mathrm{mm}$ ，直径不应小于  $10\\mathrm{mm}$ 。"
+                        }
+                    ],
+                    "subsection_name": "构造要求"
+                },
+                {
+                    "subsection": "7.6",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "7.6.1",
+                            "subsubsection_contents": "桥梁的抗震设计除应符合本规范的规定外，尚应符合现行国家标准《铁路工程抗震设计规范》GB50111的规定。"
+                        },
+                        {
+                            "subsubsection": "7.6.2",
+                            "subsubsection_contents": "桥梁的抗震设防分类应符合表7.6.2的规定。\n\n表 7.6.2 桥梁的抗震设防分类  \n\n<table><tr><td>抗震设防分类</td><td>结构类型</td></tr><tr><td>A类</td><td>单跨跨度大于或等于150m的桥梁</td></tr><tr><td>B类</td><td>除A类以外的其他桥梁</td></tr></table>"
+                        },
+                        {
+                            "subsubsection": "7.6.3",
+                            "subsubsection_contents": "桥梁的抗震设防目标应符合表7.6.3的规定。\n\n表 7.6.3 桥梁的抗震设防目标  \n\n<table><tr><td>桥梁类别</td><td>多遇地震</td><td>设计地震</td><td>罕遇地震</td></tr><tr><td>A类</td><td>-</td><td>地震后不损坏或轻微损伤,能保持其正常使用功能;结构处于弹性工作阶段</td><td>可发生局部轻微损伤,不需修复或经简单修复可继续使用</td></tr><tr><td>B类</td><td>地震后不损坏或轻微损伤,能保持其正常使用功能;结构处于弹性工作阶段</td><td>地震后可能损坏,经修补,短期内能恢复正常使用功能;允许结构整体处于非弹性工作状态</td><td>地震后可能产生较大破坏,但不出现整体倒塌,经抢修后可限速通车;结构可能处于弹塑性工作阶段</td></tr></table>"
+                        },
+                        {
+                            "subsubsection": "7.6.4",
+                            "subsubsection_contents": "在罕遇地震作用下，材料的容许应力及基础的容许承载力取值应符合下列规定：\n\n1 钢筋的容许应力应为钢筋抗拉或抗压强度标准值；  \n2 混凝土的容许应力应为混凝土的抗压极限强度；  \n3 桩基础单桩的竖向抗压容许承载力可提高至主力情况下的2倍；  \n4 桩基础单桩的竖向抗拉容许承载力可提高至主力情况下1.3倍～1.5倍。"
+                        },
+                        {
+                            "subsubsection": "7.6.5",
+                            "subsubsection_contents": "桥墩应按现行国家标准《铁路工程抗震设计规范》GB50111的规定进行延性计算。"
+                        },
+                        {
+                            "subsubsection": "7.6.6",
+                            "subsubsection_contents": "对抗震设防烈度为6度地区的A类桥梁、抗震设防烈度为7度及以上地区的A、B类桥梁，其基础、盖梁、结点、支座应作为能力保护构件，墩柱的抗剪强度宜按能力保护原则设计。"
+                        },
+                        {
+                            "subsubsection": "7.6.7",
+                            "subsubsection_contents": "在罕遇地震作用下，能力保护构件的设计应符合下列规定：\n\n1 如结构未进入塑性状态，能力保护构件的内力宜采用罕遇地震作用的计算结果；  \n2 如结构进入塑性状态，能力保护构件的内力应取与墩柱塑性铰区域截面超强弯矩所对应的弯矩和剪力；  \n3 墩柱塑性铰区域截面超强弯矩应按下式计算：\n\n$$\nM _ {\\mathrm {y} 0} = \\varphi \\times M _ {\\mathrm {y}} \\tag {7.6.7}\n$$\n\n式中：  $M_{y0}$  ——顺桥向或横桥向截面超强弯矩（  $\\mathrm{kN} \\cdot \\mathrm{m}$  ）；\n\n$M_{\\mathrm{y}}$  ——在恒载轴力作用下，采用截面实际配筋，钢筋应力取强度标准值、混凝土应力取极限强度，按现行行业标准《公路钢筋混凝土及预应力混凝土桥涵设计规范》JTG D62的规定计算的截面顺桥向和横桥向受弯承载力（ $\\mathrm{kN} \\cdot \\mathrm{m}$ ）；\n\n$\\varphi$  ——桥墩承载能力超强系数，取1.2。"
+                        },
+                        {
+                            "subsubsection": "7.6.8",
+                            "subsubsection_contents": "对于抗震设计困难且条件许可的桥梁结构宜采用减隔震设计，并应满足正常使用性能要求。"
+                        }
+                    ],
+                    "subsection_name": "抗震设计规定"
+                }
+            ],
+            "section_name": "结构设计"
+        },
+        {
+            "section": "8",
+            "section_contents": [
+                {
+                    "subsection": "8.1",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "8.1.1",
+                            "subsubsection_contents": "桥面应预留无砟轨道结构限位装置或与无砟轨道结构刚性连接的构造。"
+                        },
+                        {
+                            "subsubsection": "8.1.2",
+                            "subsubsection_contents": "单组道岔宜设置在连续的桥跨结构上；梁缝的位置应避开道岔的转辙器及辙叉部位  $2\\mathrm{m}$  以上。"
+                        },
+                        {
+                            "subsubsection": "8.1.3",
+                            "subsubsection_contents": "桥梁梁缝应设置在钢轨伸缩调节器  $2\\mathrm{m}$  以外处。"
+                        },
+                        {
+                            "subsubsection": "8.1.4",
+                            "subsubsection_contents": "梁缝处伸缩缝后的挡水凸台应留有承轨台位置，承轨台不应压在伸缩缝上。"
+                        },
+                        {
+                            "subsubsection": "8.1.5",
+                            "subsubsection_contents": "跨座式单轨轨道梁应满足列车走行轮、导向轮和稳定轮的走行要求，同时应满足信号、供电环网电缆及接触轨在梁体上的安装要求。钢轨道梁宜在结构上预留信号、供电环网电缆等系统管线通道和接触轨安装接口板。"
+                        },
+                        {
+                            "subsubsection": "8.1.6",
+                            "subsubsection_contents": "支承跨座式单轨轨道梁的组合桥应符合下列规定：  \n1 组合桥的线形宜与桥上轨道梁的线形一致；  \n2 当组合桥上布置有简支体系轨道梁时，应设置用于埋设轨道梁支座的钢筋混凝土台座，台座平面尺寸应满足锚箱安装和支座更换时顶梁空间的要求，台座高度不宜小于  $1000\\mathrm{mm}$  \n3 支承轨道梁支座的台座内应设置与锚箱排水系统连通的排水管道，并宜接入下部桥梁结构的排水系统；  \n4 组合桥上轨道梁的伸缩缝应与组合桥伸缩缝位置相同，且轨道梁伸缩缝的宽度不应小于组合桥伸缩缝的宽度。"
+                        },
+                        {
+                            "subsubsection": "8.1.7",
+                            "subsubsection_contents": "支承跨座式单轨道岔的组合桥应满足道岔区轨道梁、轨道梁支座台座、道岔控制装置等布置要求，并应预留安装接口。"
+                        }
+                    ],
+                    "subsection_name": "轨道"
+                },
+                {
+                    "subsection": "8.2",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "8.2.1",
+                            "subsubsection_contents": "桥梁应预留供电设备及线缆敷设的条件。"
+                        },
+                        {
+                            "subsubsection": "8.2.2",
+                            "subsubsection_contents": "桥梁应预留架空接触网支柱基础和下锚基础"
+                        },
+                        {
+                            "subsubsection": "8.2.3",
+                            "subsubsection_contents": "桥梁结构应进行杂散电流防护，并应符合现行行业标准《地铁杂散电流腐蚀防护技术规程》CJJ49的相关规定。"
+                        },
+                        {
+                            "subsubsection": "8.2.4",
+                            "subsubsection_contents": "桥梁结构应设置防雷接地装置，并应预留防雷接地引下线安装的条件。"
+                        },
+                        {
+                            "subsubsection": "8.2.5",
+                            "subsubsection_contents": "当需设置功能照明、景观照明时，桥梁结构上应预留安装条件。"
+                        },
+                        {
+                            "subsubsection": "8.2.6",
+                            "subsubsection_contents": "斜拉桥、中下承式拱桥及采用接触轨供电制式的高架桥应按现行国家标准《桥梁防雷技术规范》GB/T31067的要求进行防雷接地设计。"
+                        }
+                    ],
+                    "subsection_name": "供电"
+                },
+                {
+                    "subsection": "8.3",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "8.3.1",
+                            "subsubsection_contents": "桥梁应预留通信与信号设备及线缆敷设的条件。"
+                        },
+                        {
+                            "subsubsection": "8.3.2",
+                            "subsubsection_contents": "桥梁结构应在通信与信号的轨旁设备附近设置接地装置。"
+                        },
+                        {
+                            "subsubsection": "8.3.3",
+                            "subsubsection_contents": "当桥上设置声屏障时，应预留声屏障与桥梁间的连接构造。"
+                        }
+                    ],
+                    "subsection_name": "通信与信号及其他"
+                }
+            ],
+            "section_name": "桥梁设备系统接口"
+        },
+        {
+            "section": "9",
+            "section_contents": [
+                {
+                    "subsection": "9.1",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "9.1.1",
+                            "subsubsection_contents": "桥梁结构的设计使用年限应按表9.1.1规定采用。\n\n表 9.1.1 桥梁结构的设计使用年限  \n\n<table><tr><td>设计使用年限</td><td>适用范围</td></tr><tr><td>100年</td><td>不可更换构件</td></tr><tr><td>15年~60年</td><td>可更换构件</td></tr></table>\n\n注：有特殊要求的桥梁或桥梁构件的设计使用年限可结合实际情况确定。"
+                        },
+                        {
+                            "subsubsection": "9.1.2",
+                            "subsubsection_contents": "桥梁构件的耐久性设计类别应按表9.1.2规定采用。\n\n表 9.1.2 桥梁构件的耐久性设计类别  \n\n<table><tr><td rowspan=\"2\">型式</td><td rowspan=\"2\" colspan=\"3\">构件名称</td><td colspan=\"2\">耐久性设计类别</td></tr><tr><td>不可更换构件</td><td>可更换构件</td></tr><tr><td rowspan=\"14\">主体结构</td><td rowspan=\"8\">上部结构构件</td><td>梁桥</td><td>主梁</td><td>✓</td><td>-</td></tr><tr><td rowspan=\"4\">拱桥</td><td>主拱</td><td>✓</td><td>-</td></tr><tr><td>加劲梁</td><td>✓</td><td>-</td></tr><tr><td>拱上立柱、刚性吊杆</td><td>✓</td><td>-</td></tr><tr><td>吊杆索、系杆索</td><td>-</td><td>✓</td></tr><tr><td rowspan=\"3\">斜拉桥</td><td>桥塔</td><td>✓</td><td>-</td></tr><tr><td>主梁</td><td>✓</td><td>-</td></tr><tr><td>斜拉索</td><td>-</td><td>✓</td></tr><tr><td rowspan=\"6\">下部结构构件</td><td colspan=\"2\">支承垫石</td><td>✓</td><td>-</td></tr><tr><td colspan=\"2\">顶帽/盖梁</td><td>✓</td><td>-</td></tr><tr><td colspan=\"2\">墩柱</td><td>✓</td><td>-</td></tr><tr><td colspan=\"2\">承台</td><td>✓</td><td>-</td></tr><tr><td colspan=\"2\">基础</td><td>✓</td><td>-</td></tr><tr><td colspan=\"2\">桥台</td><td>✓</td><td>-</td></tr></table>\n\n续表 9.1.2  \n\n<table><tr><td rowspan=\"2\">型式</td><td rowspan=\"2\">构件名称</td><td colspan=\"2\">耐久性设计类别</td></tr><tr><td>不可更换构件</td><td>可更换构件</td></tr><tr><td rowspan=\"6\">附属结构构件</td><td>接触网支柱基础</td><td>✓</td><td>-</td></tr><tr><td>栏板及立柱</td><td>-</td><td>✓*</td></tr><tr><td>防水层及保护层</td><td>-</td><td>✓**</td></tr><tr><td>排水系统</td><td>-</td><td>✓**</td></tr><tr><td>伸缩缝</td><td>-</td><td>✓</td></tr><tr><td>支座</td><td>-</td><td>✓*</td></tr></table>\n\n注：1吊杆索、系杆索、斜拉索、伸缩缝的设计使用年限为30年；  \n2“\\*”表示构件的设计使用年限为60年；  \n3“\\*\\*”表示构件的设计使用年限为15年。"
+                        },
+                        {
+                            "subsubsection": "9.1.3",
+                            "subsubsection_contents": "桥梁结构所处环境类别应按表9.1.3的规定进行划分。\n\n表 9.1.3 环境类别  \n\n<table><tr><td colspan=\"2\">环境类别</td><td>腐蚀机理</td></tr><tr><td>T</td><td>碳化环境(一般环境)</td><td>保护层混凝土碳化导致钢筋锈蚀</td></tr><tr><td>L</td><td>氯盐环境</td><td>氯盐引起钢筋锈蚀</td></tr><tr><td>LB</td><td>除冰盐等其他氯化物环境</td><td>氯盐引起钢筋锈蚀</td></tr><tr><td>H</td><td>化学腐蚀环境</td><td>硫酸盐等化学物质对混凝土的腐蚀</td></tr><tr><td>Y</td><td>盐类结晶破坏环境</td><td>硫酸盐等化学物质在混凝土孔隙中结晶膨胀导致混凝土损伤</td></tr><tr><td>D</td><td>冻融环境</td><td>反复冻融作用导致混凝土损伤</td></tr></table>"
+                        },
+                        {
+                            "subsubsection": "9.1.4",
+                            "subsubsection_contents": "除冰盐环境下钢筋混凝土构件的环境作用等级，宜按表9.1.4确定，构件的最低强度等级、允许最大裂缝宽度、最小保护层厚度及原材料品质等应与现行行业标准《铁路混凝土结构耐久性设计规范》TB10005中的同等级氯盐环境相同。\n\n表 9.1.4 除冰盐环境的作用等级  \n\n<table><tr><td>环境作用等级</td><td>环境条件</td></tr><tr><td>LB1</td><td>受除冰盐盐雾轻度作用</td></tr><tr><td rowspan=\"2\">LB3</td><td>直接接触除冰盐溶液</td></tr><tr><td>受除冰盐水溶液重度溅射或重度盐雾作用</td></tr></table>"
+                        },
+                        {
+                            "subsubsection": "9.1.5",
+                            "subsubsection_contents": "桥梁结构的耐久性设计除应符合本规范外，尚应符合现行行业标准《铁路混凝土结构耐久性设计规范》TB10005的规定。"
+                        }
+                    ],
+                    "subsection_name": "耐久性设计"
+                },
+                {
+                    "subsection": "9.2",
+                    "subsection_contents": [
+                        {
+                            "subsubsection": "9.2.1",
+                            "subsubsection_contents": "跨度大于  $150\\mathrm{m}$  的跨江、跨河桥梁，应在大桥两端分别设置巡守用房，并宜设置维护管理用房。两巡守房之间应在桥面两侧设置宽度不小于  $1.05\\mathrm{m}$  的检修通道，并应与行车区隔离。"
+                        },
+                        {
+                            "subsubsection": "9.2.2",
+                            "subsubsection_contents": "桥梁养护、维修应符合下列规定：\n\n1 宜设置宽度不小于  $3\\mathrm{m}$  养桥道路；当无养桥道路时，宜设置检查养护设备；  $20\\mathrm{m}$  及以上高桥墩应设置专用检查设备。  \n2 箱梁宜预留进入每孔箱梁内部的进人通道，并宜分段贯通。"
+                        },
+                        {
+                            "subsubsection": "9.2.3",
+                            "subsubsection_contents": "桥梁的桥面宜设置功能照明设施，分层布置的合建桥梁应设置供电设备，并应在轨道交通桥面设置照明及供水设施。"
+                        },
+                        {
+                            "subsubsection": "9.2.4",
+                            "subsubsection_contents": "桥梁应设检查设施。拱肋、桁梁的弦杆上应设置检修通道。桥塔内宜设置检修用的照明电源。"
+                        },
+                        {
+                            "subsubsection": "9.2.5",
+                            "subsubsection_contents": "分层布置的合建桥梁，上层桥面梁底应设置周边封闭的检查车，其养护维修作业不得影响轨道交通的正常运营。"
+                        },
+                        {
+                            "subsubsection": "9.2.6",
+                            "subsubsection_contents": "钢结构应根据免维修年限的要求选用涂装体系。"
+                        }
+                    ],
+                    "subsection_name": "养护设施"
+                }
+            ],
+            "section_name": "耐久性设计及养护设施"
+        }
+    ]
+}
