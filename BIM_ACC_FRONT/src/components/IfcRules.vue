@@ -87,7 +87,7 @@ function handleUploadSuccess(response) {
   }
 }
 
-// 新增：查看数据库列表
+// 查看数据库列表
 function handleViewDatabases() {
   emit('view-databases')
 }
@@ -123,13 +123,17 @@ async function handleAnalyzeRules() {
     console.error('解析请求失败:', error)
     ElMessage.error('解析规范条文失败，请稍后重试')
   } finally {
-    // 关闭加载状态
     loading.close()
   }
 }
 </script>
 
 <style scoped>
+/* 全局盒模型统一，避免边框/内边距影响尺寸 */
+* {
+  box-sizing: border-box;
+}
+
 /* 核心暗系样式 */
 .control-card {
   position: fixed;
@@ -138,7 +142,7 @@ async function handleAnalyzeRules() {
   transform: translateY(-50%);
   width: 290px;
   max-width: 90vw;
-  height: 88vh;
+  height: 60vh;
   max-height: 750px;
   background: rgba(15, 15, 25, 0.96);
   backdrop-filter: blur(20px);
@@ -204,35 +208,110 @@ async function handleAnalyzeRules() {
   transform: translateY(-10%);
 }
 
-/* 按钮样式 - 调整大小和比例 */
+/* ========== 上传按钮样式（完全匹配其他按钮） ========== */
+.upload-btn {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  padding: 0; /* 清除el-upload默认内边距 */
+}
+
+/* 覆盖el-upload内部容器样式 */
+.upload-btn :deep(.el-upload) {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+/* 强制覆盖el-upload内部按钮样式 */
+.upload-btn :deep(.el-button) {
+  width: 100% !important;
+  height: 55px !important;
+  line-height: 55px !important;
+  border-radius: 15px !important;
+  border: 1px solid rgba(124, 58, 237, 0.2) !important;
+  background: rgba(30, 41, 59, 0.6) !important;
+  color: #e2e8f0 !important;
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.3px !important;
+  transition: all 0.3s ease !important;
+  position: relative !important;
+  overflow: hidden !important;
+  padding: 0 !important; /* 清除默认内边距 */
+  margin: 0 !important;  /* 清除默认外边距 */
+  box-sizing: border-box !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+/* 上传按钮hover效果 */
+.upload-btn :deep(.el-button):hover {
+  background: linear-gradient(135deg, rgba(45, 35, 80, 0.8), rgba(35, 25, 70, 0.8)) !important;
+  border-color: #9333ea !important;
+  color: #f8fafc !important;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
+  width: 100% !important;
+  height: 55px !important;
+}
+
+/* 上传按钮点击波纹效果 */
+.upload-btn :deep(.el-button)::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-radius: 50% !important;
+  background: rgba(74, 222, 128, 0.2) !important;
+  transform: translate(-50%, -50%) !important;
+  transition: width 0.6s ease, height 0.6s ease !important;
+}
+
+.upload-btn :deep(.el-button):active::after {
+  width: 300px !important;
+  height: 300px !important;
+  opacity: 0 !important;
+}
+
+/* ========== 普通按钮样式 ========== */
 .rules-button {
-  width: 90%; /* 按钮宽度改为90%，居中显示 */
-  height: 55px; /* 增加按钮高度 */
+  width: 90%;
+  height: 55px;
   line-height: 55px;
-  margin: 0 auto; /* 按钮居中 */
-  border-radius: 15px; /* 增大圆角 */
+  margin: 0 auto;
+  border-radius: 15px;
   border: 1px solid rgba(124, 58, 237, 0.2);
   background: rgba(30, 41, 59, 0.6);
   color: #e2e8f0;
-  font-size: 1rem; /* 增大字体 */
+  font-size: 1rem;
   font-weight: 500;
   letter-spacing: 0.3px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-sizing: border-box;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* 按钮hover效果 */
+/* 普通按钮hover效果 */
 .rules-button.hover-active {
   background: linear-gradient(135deg, rgba(45, 35, 80, 0.8), rgba(35, 25, 70, 0.8)) !important;
   border-color: #9333ea !important;
-  color: #f8fafc;
-  transform: translateY(-3px); /* 增大上浮距离 */
+  color: #f8fafc !important;
+  transform: translateY(-3px) !important;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
-  width: 92%; /* hover时轻微加宽 */
+  width: 92% !important;
 }
 
-/* 按钮点击波纹效果 */
+/* 普通按钮点击波纹效果 */
 .rules-button::after {
   content: '';
   position: absolute;
@@ -254,27 +333,21 @@ async function handleAnalyzeRules() {
 
 /* 修改element-plus按钮默认样式 */
 :deep(.el-button) {
-  --el-button-text-color: #e2e8f0;
-  --el-button-hover-text-color: #f8fafc;
-  --el-button-bg-color: transparent;
-  --el-button-hover-bg-color: transparent;
-  --el-button-border-color: transparent;
-  --el-button-hover-border-color: transparent;
-  font-size: 1rem;
+  --el-button-text-color: #e2e8f0 !important;
+  --el-button-hover-text-color: #f8fafc !important;
+  --el-button-bg-color: transparent !important;
+  --el-button-hover-bg-color: transparent !important;
+  --el-button-border-color: transparent !important;
+  --el-button-hover-border-color: transparent !important;
+  font-size: 1rem !important;
 }
 
 :deep(.el-button--success) {
-  --el-button-text-color: #e2e8f0;
+  --el-button-text-color: #e2e8f0 !important;
 }
 
 :deep(.el-button--info) {
-  --el-button-text-color: #e2e8f0;
-}
-
-/* 上传组件样式适配 */
-:deep(.upload-btn) {
-  width: 100%;
-  justify-content: center;
+  --el-button-text-color: #e2e8f0 !important;
 }
 
 /* 滚动条美化 */
@@ -297,5 +370,18 @@ async function handleAnalyzeRules() {
   background: rgba(124, 58, 237, 0.6);
   width: 8px;
   box-shadow: 0 0 10px rgba(124, 58, 237, 0.4);
+}
+
+/* 渐变动画 */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 </style>

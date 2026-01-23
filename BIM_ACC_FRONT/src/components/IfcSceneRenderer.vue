@@ -15,7 +15,7 @@ const containerRef = ref()
 // 内部状态
 let components, world, fragments, model
 let LOCKED_ID = []
-const meshes = []
+const meshes = [] // 用于存放自定义生成的材质物体
 
 // 初始化场景
 onMounted(async () => {
@@ -32,6 +32,7 @@ async function initScene() {
   world.renderer = new OBC.SimpleRenderer(components, containerRef.value)
   world.camera = new OBC.SimpleCamera(components)
   await world.camera.controls.setLookAt(58, 22, -25, 13, 0, 4.2)
+
   components.init()
 
   const grids = components.get(OBC.Grids)
@@ -68,19 +69,85 @@ async function loadModel(arrayBuffer) {
   }
 
   model = await fragments.load(fragmentBytes, { modelId: 'example' })
+
+  // 新增：墙体纹理加载逻辑
+  await applyWallTexture()
+
+
   const categories = await model.getCategories()
   emit('load-model', categories)
   setupRaycasting()
 }
 
 
-// 射线拾取
+async function applyWallTexture() {
+  if (!model) return
+
+  // 1. 获取所有墙体 ID
+  const walls = await model.getItemsOfCategories([
+    /IFCWALL/i,
+    /IFCWALLSTANDARDCASE/i
+  ])
+  const wallIds = Object.values(walls).flat()
+  if (wallIds.length === 0) return
+
+  // 2. 加载纹理
+  const loader = new THREE.TextureLoader()
+  const concreteTexture = loader.load('/img/concrete.jpg', (tex) => {
+    tex.wrapS = tex.wrapT = THREE.RepeatWrapping
+    tex.repeat.set(0.1, 0.1) // 纹理平铺比例
+    fragments.update(true)
+  })
+
+  const wallMaterial = new THREE.MeshLambertMaterial({
+    map: concreteTexture,
+    side: THREE.DoubleSide,
+    polygonOffset: true, // 开启多边形偏移，防止与原始构件闪烁(Z-fighting)
+    polygonOffsetFactor: -1,
+    polygonOffsetUnits: -1
+  })
+
+  // 3. 提取几何体并渲染
+  const geometries = await model.getItemsGeometry(wallIds)
+
+  geometries.forEach((geoArr) => {
+    geoArr.forEach((data) => {
+      const mesh = createMesh(data, wallMaterial)
+      if (mesh) {
+        // 纹理层不参与射线检测，防止干扰点击
+        mesh.raycast = () => {}
+        world.scene.three.add(mesh)
+      }
+    })
+  })
+
+  // 4. 保持原始墙体可见，确保高亮能被看到
+  await fragments.update(true)
+}
+
+
+
+// 创建网格函数
+function createMesh(data, material) {
+  const { positions, indices, normals, transform } = data
+  if (!(positions && indices && normals)) return null
+  const geo = new THREE.BufferGeometry()
+  geo.setAttribute('position', new THREE.BufferAttribute(positions, 3))
+  geo.setAttribute('normal', new THREE.BufferAttribute(normals, 3))
+  geo.setIndex(Array.from(indices))
+  const mesh = new THREE.Mesh(geo, material)
+  mesh.applyMatrix4(transform)
+  meshes.push(mesh)
+  return mesh
+}
+
+// 射线拾取（保留原始功能并优化高亮透明度）
 function setupRaycasting() {
   const highlightMaterial = {
     color: new THREE.Color('purple'),
     renderedFaces: FRAGS.RenderedFaces.TWO,
-    opacity: 1,
-    transparent: false,
+    opacity: 0.6, // 降低透明度，让底层的纹理能透出来
+    transparent: true,
   }
 
   const mouse = new THREE.Vector2()
@@ -168,7 +235,7 @@ function setupRaycasting() {
   })
 }
 
-// 高亮处理
+// 高亮处理（保留原始功能并优化透明度）
 async function highlightByGuids(guids, colorName) {
   if (!model || !guids.length) return
   LOCKED_ID = []
@@ -186,8 +253,8 @@ async function highlightByGuids(guids, colorName) {
   const material = {
     color: colorMap[colorName] || colorMap.orange,
     renderedFaces: FRAGS.RenderedFaces.TWO,
-    opacity: 1,
-    transparent: false
+    opacity: 0.7,
+    transparent: true
   }
 
   model.highlight(localIds, material)
@@ -225,6 +292,7 @@ async function getEntityPsets(localId, format) {
   const rawPsets = data.IsDefinedBy || []
   const result = format ? formatItemPsets(rawPsets) : rawPsets
   console.log('PropertySets:', result)
+  return result
 }
 
 // 格式化属性集
@@ -259,6 +327,7 @@ async function getCategoryNames(category) {
       .map((d) => (d.Name?.value ? String(d.Name.value) : null))
       .filter(Boolean)
   console.log('Names:', names)
+  return names
 }
 
 // 加载类别几何
@@ -279,27 +348,17 @@ async function loadCategoryGeometries(category) {
   await fragments.update(true)
 }
 
-// 创建网格
-function createMesh(data, material) {
-  const { positions, indices, normals, transform } = data
-  if (!(positions && indices && normals)) return null
-  const geo = new THREE.BufferGeometry()
-  geo.setAttribute('position', new THREE.BufferAttribute(positions, 3))
-  geo.setAttribute('normal', new THREE.BufferAttribute(normals, 3))
-  geo.setIndex(Array.from(indices))
-  const mesh = new THREE.Mesh(geo, material)
-  mesh.applyMatrix4(transform)
-  meshes.push(mesh)
-  return mesh
-}
-
 // 清除几何
 async function disposeGeometries() {
   meshes.forEach((m) => {
     m.removeFromParent()
-    m.geometry.dispose()
-    const materials = Array.isArray(m.material) ? m.material : [m.material]
-    materials.forEach((mat) => mat.dispose())
+    if (m.geometry) m.geometry.dispose()
+    // 释放材质和纹理资源
+    if (m.material) {
+      if (m.material.map) m.material.map.dispose()
+      const materials = Array.isArray(m.material) ? m.material : [m.material]
+      materials.forEach((mat) => mat.dispose())
+    }
   })
   meshes.length = 0
   if (model) {

@@ -56,7 +56,8 @@
   <el-dialog
       :model-value="isDatabaseInfoVisible"
       :title="`规范文件详情: ${selectedDatabase}`"
-      width="800"
+      width="1200"
+      class="db-details"
       @close="handleClose"
   >
     <!-- 搜索框 -->
@@ -433,4 +434,8 @@ onMounted(() => {
 :deep(.el-skeleton) {
   --el-skeleton-row-height: 40px;
 }
+
+
+/*数据库弹窗样式 */
+
 </style>

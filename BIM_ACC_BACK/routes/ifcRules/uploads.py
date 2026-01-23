@@ -1,6 +1,5 @@
 import os
 from flask import Blueprint, request, jsonify
-from werkzeug.utils import secure_filename
 
 # 创建蓝图
 upload_bp = Blueprint('upload', __name__)
@@ -34,14 +33,10 @@ def upload_file():
 
     # 检查文件类型是否允许
     if file and allowed_file(file.filename):
-        # 关键：仅对原始文件名做安全处理（去除特殊字符、防止路径攻击），不修改名称本身
-        original_filename = file.filename  # 保存原始文件名（用于返回给前端）
-        # safe_filename = secure_filename(original_filename)  # 安全处理后的文件名（用于存储）
+        original_filename = file.filename
 
         # 拼接保存路径
         file_path = os.path.join(UPLOAD_FOLDER, original_filename)
-
-        # 可选逻辑1：允许同名文件覆盖（默认行为）
         file.save(file_path)
 
         return jsonify({
