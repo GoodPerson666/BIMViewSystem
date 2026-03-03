@@ -59,7 +59,7 @@
             <el-table :data="RecognizeRulesTypeData" border stripe height="400" style="width: 100%">
               <el-table-column prop="规范来源" label="规范来源" width="250" show-overflow-tooltip />
               <el-table-column prop="规范内容" label="规范内容" min-width="350" />
-              <el-table-column prop="识别类型" label="识别类型" width="120" align="center">
+              <el-table-column prop="识别类型" label="识别类型" width="120" >
                 <template #default="{row}">
                   <el-tag size="small" effect="light">{{ row.识别类型 }}</el-tag>
                 </template>
@@ -82,13 +82,13 @@
         </div>
         <el-collapse-transition>
           <div v-show="tableExpandStatus.RecognizeRulesProperties" class="table-body">
-            <p class="table-subtitle">实体识别前</p>
+            <p class="table-subtitle">结果分析Agent语义校验前</p>
             <el-table :data="RecognizeRulesPropertiesFrontData" border stripe height="300" class="mb-4">
               <el-table-column prop="实体文本" label="实体文本" width="300" />
               <el-table-column prop="实体类型" label="实体类型" />
               <el-table-column prop="规则序号" label="规则序号" width="100" align="center" />
             </el-table>
-            <p class="table-subtitle">实体识别后</p>
+            <p class="table-subtitle">结果分析Agent语义校验前</p>
             <el-table :data="RecognizeRulesPropertiesData" border stripe height="300">
               <el-table-column prop="实体文本" label="实体文本" width="300" />
               <el-table-column prop="实体类型" label="实体类型" />
@@ -102,7 +102,7 @@
         <div class="table-header" @click="toggleTable('IfcClass')">
           <div class="title-wrapper">
             <span class="index-badge">03</span>
-            <h4 class="table-title">第三部分：IFC类型及属性集识别</h4>
+            <h4 class="table-title">第三部分：IFC实体提取及其所有属性抽取</h4>
           </div>
           <el-icon class="toggle-icon" :class="{ 'is-rotate': tableExpandStatus.IfcClass }">
             <ArrowDown />
@@ -130,7 +130,7 @@
         <div class="table-header" @click="toggleTable('EntitiesToRules')">
           <div class="title-wrapper">
             <span class="index-badge">04</span>
-            <h4 class="table-title">第四部分：规范实体与条文对齐</h4>
+            <h4 class="table-title">第四部分：语义对齐第一阶段：类层级对齐</h4>
           </div>
           <el-icon class="toggle-icon" :class="{ 'is-rotate': tableExpandStatus.EntitiesToRules }">
             <ArrowDown />
@@ -150,7 +150,7 @@
         <div class="table-header" @click="toggleTable('entityStrength')">
           <div class="title-wrapper">
             <span class="index-badge">05</span>
-            <h4 class="table-title">第五部分：实体与IFC类型对齐</h4>
+            <h4 class="table-title">第五部分：语义对齐第二阶段：实例层级对齐</h4>
           </div>
           <el-icon class="toggle-icon" :class="{ 'is-rotate': tableExpandStatus.entityStrength }">
             <ArrowDown />
@@ -158,21 +158,21 @@
         </div>
         <el-collapse-transition>
           <div v-show="tableExpandStatus.entityStrength" class="table-body">
-            <p class="table-subtitle">实体与IFC类型对齐前</p>
+            <p class="table-subtitle">结果分析Agent语义校验前</p>
             <el-table :data="entityStrengthFrontData" border height="300" class="mb-4" size="small">
               <el-table-column prop="ruleNumber" label="序号" width="80" />
               <el-table-column prop="specEntityText" label="规范实体" />
               <el-table-column prop="ifcGuid" label="IFC GUID" width="280" />
               <el-table-column prop="ifcEntityWithType" label="实体类型" />
             </el-table>
-            <p class="table-subtitle">实体与IFC类型新增对齐属性</p>
+            <p class="table-subtitle">结果分析Agent语义校验后新增对齐</p>
             <el-table :data="entityStrengthNewData" border height="300" class="mb-4" size="small">
               <el-table-column prop="ruleNumber" label="序号" width="80" />
               <el-table-column prop="specEntityText" label="规范实体" />
               <el-table-column prop="ifcGuid" label="IFC GUID" width="280" />
               <el-table-column prop="ifcEntityWithType" label="实体类型" />
             </el-table>
-            <p class="table-subtitle">实体与IFC类型对齐所有属性</p>
+            <p class="table-subtitle">结果分析Agent语义校验后完整对齐结果</p>
             <el-table :data="entityStrengthData" border height="300" size="small">
               <el-table-column prop="ruleNumber" label="序号" width="80" />
               <el-table-column prop="specEntityText" label="规范实体" />
@@ -187,7 +187,7 @@
         <div class="table-header" @click="toggleTable('tupleSet')">
           <div class="title-wrapper">
             <span class="index-badge">06</span>
-            <h4 class="table-title">第六部分：元组集合数据</h4>
+            <h4 class="table-title">第六部分：提取规范实体组——IFC实体组</h4>
           </div>
           <el-icon class="toggle-icon" :class="{ 'is-rotate': tableExpandStatus.tupleSet }">
             <ArrowDown />
@@ -235,7 +235,7 @@
         <div class="table-header" @click="toggleTable('chooseStrategy')">
           <div class="title-wrapper">
             <span class="index-badge">07</span>
-            <h4 class="table-title">第七部分：规范数据选择</h4>
+            <h4 class="table-title">第七部分：高相关属性选择及属性值抽取</h4>
           </div>
           <el-icon class="toggle-icon" :class="{ 'is-rotate': tableExpandStatus.chooseStrategy }">
             <ArrowDown />

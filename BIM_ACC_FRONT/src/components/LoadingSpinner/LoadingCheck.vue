@@ -74,11 +74,11 @@ const checkState = reactive({
 const parts = [
   '正在执行第一部分，规范类型识别......',
   '正在执行第二部分，规范实体识别......',
-  '正在执行第三部分，IFC类型及属性集识别......',
-  '正在执行第四部分，规范实体与条文对齐......',
-  '正在执行第五部分，实体与IFC类型对齐......',
-  '正在执行第六部分，构建实体对齐元组......',
-  '正在执行第七部分，规范相关属性选择......',
+  '正在执行第三部分，IFC实体提取及其所有属性抽取......',
+  '正在执行第四部分，语义对齐第一阶段——类层级对齐......',
+  '正在执行第五部分，语义对齐第二阶段——实例层级对齐......',
+  '正在执行第六部分，提取规范实体组——IFC实体组......',
+  '正在执行第七部分，高相关属性选择及属性值抽取......',
   '正在执行第八部分，进行合规性审查......',
 ]
 
@@ -125,7 +125,7 @@ function appendLog(text, status = 'running') {
   const badge = document.createElement('span')
   badge.className = 'badge'
   badge.textContent = status === 'done' ? '完成' :
-      status === 'output' ? '输出' :
+      status === 'output' ? '输出范例' :
           status === 'error' ? '错误' : '执行'
 
   const content = document.createElement('span')

@@ -1,93 +1,22 @@
+# 用于返回样例数据
+
 import random
-import sqlite3
 import time
 from flask import jsonify, Blueprint
 
 check_results_bp = Blueprint('check_results', __name__)
 
-
-# 查询有多少种ifc实体（如门、窗、墙等等）
-def ifc_class_results():
-    conn = sqlite3.connect(r'instance/data.db')
-    sql = "select guid, ifc_type, name  from IFC实体 where guid='2TJvWVuN51mepwyN3rKIGl'"
-    rows = conn.execute(sql).fetchall()
-    # 返回结果('0CFRT$QsDD89xIDV$SU1iU', 'IfcSlab', '组合楼梯:楼梯:230353 Landing 1')
-    return rows[0]
-
-
-# 查询实体数量（包含多少个guid）
-def entity_check_results():
-    conn = sqlite3.connect(r'instance/data.db')
-    sql = "select count(guid) from IFC实体"
-    rows = conn.execute(sql).fetchone()
-    return rows[0]
-
-
-# 查询具体属性个数(查询每个构建对应的属性)
-def properties_check_results():
-    conn = sqlite3.connect(r'instance/data.db')
-    sql = "select count(*) from IFC属性集"
-    rows = conn.execute(sql).fetchone()
-    return rows[0]
-
-
-# 查询指定guid的实体名称
-def properties_set_results():
-    conn = sqlite3.connect(r'instance/data.db')
-    sql = "select property_name from IFC属性集 where guid='2TJvWVuN51mepwyN3rKIGl'"
-    rows = conn.execute(sql).fetchall()
-    return rows
-
-
-def recognize_rules_type_results():
-    conn = sqlite3.connect(r'instance/data.db')
-    sql = "select 规范来源,规范内容,识别类型, 规则序号 from 结果_1_规范类型识别"
-    # 返回结果('建筑设计防火规范', '耐火等级为三级的厂房，其防火墙的耐火极限不低于3h。', '属性约束类')
-    rows = conn.execute(sql).fetchall()
-    return rows
-
-
-def recognize_rules_properties_results():
-    conn = sqlite3.connect(r'instance/data.db')
-    sql = "select 实体文本,实体类型,规则序号 from 结果_2_规范实体识别_前"
-    rows = conn.execute(sql).fetchall()
-    # 返回结果为('柱','建筑物构'件','28'),
-    return rows
-
-
-# 实体对齐增强
-def entity_strength_results():
-    conn = sqlite3.connect(r'instance/data.db')
-    sql = "select 规则序号,规范实体文本,ifc_guid,ifc_entity_with_type from 结果_4_实体对齐_新增"
-    rows = conn.execute(sql).fetchall()
-    return rows
-
-
-# 构建元组
-def tuple_set_results():
-    conn = sqlite3.connect(r'instance/data.db')
-    sql = "select 规则序号,规范实体组,IFC实体组 from 结果_5_规范元素组"
-    rows = conn.execute(sql).fetchall()
-    return rows
-
-
 def generate_check_results():
-    recognize_rules = recognize_rules_type_results()[3]
-    recognize_rules_properties = recognize_rules_properties_results()[3]
-    ifc_class = ifc_class_results()
-    entity_check = entity_check_results()
-    properties_check = properties_check_results()
-    properties_set = properties_set_results()
-    entity_strength = entity_strength_results()[0]
-    tuple_set = tuple_set_results()[0]
+
     outputs = [
-        f'生成内容：规范类型如下 ——> 规范来源：{recognize_rules[0]}；规范内容：{recognize_rules[1]}；识别类型：{recognize_rules[2]}；规则序号：{recognize_rules[3]}...共计8条',
-        f'生成内容：规范实体如下 ——> 实体文本：{recognize_rules_properties[0]}；实体类型：{recognize_rules_properties[1]}；规则序号：{recognize_rules_properties[2]}',
-        f'生成内容：识别实体  ——> guid:{ifc_class[0]},ifc_tpye:{ifc_class[1]},name:{ifc_class[2]}',
-        f'生成内容：完成实体属性识别、对齐 ，guid为：2TJvWVuN51mepwyN3rKIGl 的构建包含{properties_set}等。{entity_check} 个实体共{properties_check} 条关系映射。',
-        f'生成内容：完成规范实体与条文对齐 ——> 根据条文“耐火等级为三级的厂房，其柱的耐火极限不低于2h”，对齐到实体“厂房”、“柱”...',
-        f'生成内容：完成规范实体与IFC属性增强对齐，新增:规则序号:{entity_strength[0]}；规范实体文本:{entity_strength[1]}；ifc_guid:{entity_strength[2]}；ifc_entity_with_type:{entity_strength[3]}',
-        f'生成内容：构建实体对齐元组 ——> 规则序号：{tuple_set[0]}；规范实体组：{tuple_set[1]}；IFC实体组：{tuple_set[2]} '
+        '''1）规范来源：建筑设计防火规范；规范内容：耐火等级为三级的厂房，其防火墙的耐火极限不低于3h。规范类型识别结果为：属性约束类。''',
+        '''2）规范内容：耐火等级为三级的厂房，其防火墙的耐火极限不低于3h。规范实体识别结果（规范实体-实体类型）为：防火墙-建筑物构件；厂房-建筑物。''',
+        '''3）IFC类型为IfcWall的IFC构件（guid，name（IFC类型））有： 0cauBN0lX9uQLK9JxG0zwB，基本墙:常规 - 200mm:221983(IfcWall)；04M84dkEz8GhpqWbHUDGAV，基本墙:常规 - 200mm:243846(IfcWall)；1Dkc0PZSH8QhoXanFZjEP0，基本墙:常规 - 200mm:237969(IfcWall)；IFC类型为IfcBuilding的IFC构件（guid，name（IFC类型））有： 2OibT2UMLBYgfonVRELIuz，(IfcBuilding)''',
+        '''4）规范内容：耐火等级为三级的厂房，其防火墙的耐火极限不低于3h。防火墙-建筑物构件的IFC类层级对齐结果为：IfcWall，匹配原因：防火墙作为建筑物构件，最适合映射为IfcWall，因为IFC中的IfcWall专门用于表示墙体构件，符合耐火等级要求的描述。；厂房-建筑物的IFC类层级对齐结果为：IfcBuilding，匹配原因：厂房作为一个建筑物的整体，可以直接映射为IfcBuilding，因为该规范实体描述的是建筑物的性质和功能。''',
+        '''5）在IFC实例层级对齐中，与防火墙-建筑物构件对齐的IFC构件有0cauBN0lX9uQLK9JxG0zwB，基本墙:常规 - 200mm:221983(IfcWall)，其匹配原因为：[LLM修正] 在IFC实体中，存在"消防系统"属性集，其中明确指出耐火极限为3.47。这表明该墙体具备一定的防火性能，虽然没有直接标示为防火墙，但耐火极限可以被视为判断其适用于防火墙的依据，因此该判断理由不成立。并且，"是否承重"的属性表示该墙是承重的，进一步证明其结构功能符合防火墙的典型要求。在IFC实例层级对齐中，与厂房-建筑物对齐的IFC构件有2OibT2UMLBYgfonVRELIuz，(IfcBuilding)，其匹配原因为：在IFC实体信息中，虽然没有直接出现"厂房"这一词汇，但在"标识数据"属性集中存在"建筑名称": "工业厂房"，其中的"厂房"与规范实体"厂房"语义等效。因此，这一IFC实体可以被认定为等同于规范实体"厂房"。''',
+        '''6）规范内容：耐火等级为三级的厂房，其防火墙的耐火极限不低于3h。规范实体组为[{"text": "厂房","type": "建筑物"},{"text": "防火墙","type": "建筑物构件"}]，对应的IFC实体组为[{"guid": "2OibT2UMLBYgfonVRELIuz","type":"(IfcBuilding)"},{"guid":"0cauBN0lX9uQLK9JxG0zwB","type": "基本墙:常规 - 200mm:221983(IfcWall)"}]。''',
+        '''7）规范内容：耐火等级为三级的厂房，其防火墙的耐火极限不低于3h。高相关属性集选择结果为：厂房：工厂耐火等级（选择原因：该属性直接相关于厂房的耐火等级要求，根据规范内容，其防火墙的耐火极限应符合特定等级的标准。）、火灾危险性（选择原因：火灾危险性与耐火设计息息相关，了解火灾危险性有助于确定防火墙的详细设计与耐火极限要求。）；防火墙：耐火极限（选择原因：耐火墙的耐火极限是直接关系到规范内容的核心属性，符合规范要求的耐火限度至关重要。）、是否是防火墙（选择原因：该属性确认该墙体的功能是否为防火墙，确保符合设计和规范要求。）具体属性内容：2OibT2UMLBYgfonVRELIuz工厂耐火等级：三级；火灾危险性：丙级。0cauBN0lX9uQLK9JxG0zwB耐火极限：3.47。''',
+        '''8）规范内容：耐火等级为三级的厂房，其防火墙的耐火极限不低于3h。IFC实体组为[{"guid": "2OibT2UMLBYgfonVRELIuz","type":"(IfcBuilding)"},{"guid":"0cauBN0lX9uQLK9JxG0zwB","type": "基本墙:常规 - 200mm:221983(IfcWall)"}]。判断结果：合规。判断原因：根据规范要求，耐火等级为三级的厂房，其防火墙的耐火极限不低于3h。对应的IFC实体2OibT2UMLBYgfonVRELIuz ((IfcBuilding))具备了工厂耐火等级的属性，值为"三级"，满足规范要求中的耐火等级条件。接下来查看对应的IFC实体0cauBN0lX9uQLK9JxG0zwB (基本墙:常规 - 200mm:221983(IfcWall))，其具备耐火极限属性，值为'3.47'，满足规范要求的耐火极限不低于3h。因此判断该规范适用。接下来的合规性分析，IFC实体2OibT2UMLBYgfonVRELIuz的工厂耐火等级为'三级'，0cauBN0lX9uQLK9JxG0zwB的耐火极限为'3.47'，均满足规范要求，故判定为合规。''',
     ]
     return outputs
 
