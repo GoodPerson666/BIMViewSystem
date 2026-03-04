@@ -1,6 +1,5 @@
 from flask import Blueprint, jsonify, request, current_app
 import os
-import json
 import sqlite3
 from sqlite3 import Error
 import csv  # 新增CSV处理模块
@@ -84,11 +83,10 @@ def create_tables(db_name):
 
 
 def insert_data(db_name, data=None):
-    """向指定SQLite数据库插入CSV数据，从/insert_data目录下寻找同名CSV文件"""
     # 构建CSV文件路径
     csv_file_path = os.path.join('uploads', f'{db_name}.csv')
 
-    # 检查insert_data目录是否存在
+    # 检查目录是否存在
     if not os.path.exists('uploads'):
         current_app.logger.error("uploads目录不存在")
         return False
@@ -101,7 +99,7 @@ def insert_data(db_name, data=None):
     # 读取CSV数据
     try:
         csv_data = []
-        with open(csv_file_path, 'r', encoding='utf-8') as f:
+        with open(csv_file_path, 'r', encoding='gbk') as f:
             # 使用DictReader读取CSV，第一行作为表头
             reader = csv.DictReader(f)
             # 验证表头是否符合要求
@@ -113,7 +111,7 @@ def insert_data(db_name, data=None):
             # 读取每一行数据
             for row in reader:
                 csv_data.append({
-                    'rule_serial': int(row['规则序号']),
+                    'rule_serial': row['规则序号'].strip(),
                     'standard_source': row['规范来源'].strip(),
                     'clause_number': row['条款编号'].strip(),
                     'subclause_number': row['条款子句序号'].strip(),
@@ -192,12 +190,13 @@ def search_database(db_name):
               WHERE (content LIKE ?
                   OR standard_source LIKE ?
                   OR clause_number LIKE ?
-                  OR subclause_number LIKE ?)
+                  OR subclause_number LIKE ?
+                  OR rule_serial LIKE ? )
               ORDER BY rule_serial
               """
         # 构建模糊搜索参数
         search_param = f'%{keyword}%'
-        cursor.execute(sql, (search_param, search_param, search_param, search_param))
+        cursor.execute(sql, (search_param, search_param, search_param, search_param,search_param))
         results = cursor.fetchall()
 
         # 转换Row对象为字典
@@ -260,12 +259,6 @@ def analyze_rules():
             # 执行数据库操作
             create_database(db_name)
             create_tables(db_name)
-
-            # 先将CSV文件复制到insert_data目录（方便insert_data函数读取）
-            import shutil
-            os.makedirs('insert_data', exist_ok=True)
-            target_path = os.path.join('insert_data', f'{db_name}.csv')
-            shutil.copy2(file_path, target_path)
 
             # 调用insert_data插入CSV数据
             insert_success = insert_data(db_name)
