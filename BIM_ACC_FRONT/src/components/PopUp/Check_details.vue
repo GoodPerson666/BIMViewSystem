@@ -139,8 +139,11 @@
         <el-collapse-transition>
           <div v-show="tableExpandStatus.EntitiesToRules" class="table-body">
             <el-table :data="EntitiesToRulesData" border stripe height="400">
-              <el-table-column prop="规范条文" label="规范条文" min-width="500" />
-              <el-table-column prop="实体" label="对应实体" width="200" />
+              <el-table-column prop="规范内容" label="规范内容" min-width="400" />
+              <el-table-column prop="规范实体" label="规范实体" width="100" />
+              <el-table-column prop="规范实体类型" label="规范实体类型" width="100" />
+              <el-table-column prop="匹配IFC类型" label="匹配IFC类型" width="100" />
+              <el-table-column prop="匹配原因" label="匹配原因" width="400" />
             </el-table>
           </div>
         </el-collapse-transition>
@@ -161,23 +164,26 @@
             <p class="table-subtitle">结果分析Agent语义校验前</p>
             <el-table :data="entityStrengthFrontData" border height="300" class="mb-4" size="small">
               <el-table-column prop="ruleNumber" label="序号" width="80" />
-              <el-table-column prop="specEntityText" label="规范实体" />
+              <el-table-column prop="specEntityText" label="规范实体" width="100"/>
               <el-table-column prop="ifcGuid" label="IFC GUID" width="280" />
-              <el-table-column prop="ifcEntityWithType" label="实体类型" />
+              <el-table-column prop="ifcEntityWithType" label="实体类型" width="300"/>
+              <el-table-column prop="匹配原因" label="匹配原因" width="300"/>
             </el-table>
             <p class="table-subtitle">结果分析Agent语义校验后新增对齐</p>
             <el-table :data="entityStrengthNewData" border height="300" class="mb-4" size="small">
               <el-table-column prop="ruleNumber" label="序号" width="80" />
-              <el-table-column prop="specEntityText" label="规范实体" />
+              <el-table-column prop="specEntityText" label="规范实体" width="100"/>
               <el-table-column prop="ifcGuid" label="IFC GUID" width="280" />
-              <el-table-column prop="ifcEntityWithType" label="实体类型" />
+              <el-table-column prop="ifcEntityWithType" label="实体类型" width="300"/>
+              <el-table-column prop="匹配原因" label="匹配原因" width="300"/>
             </el-table>
             <p class="table-subtitle">结果分析Agent语义校验后完整对齐结果</p>
             <el-table :data="entityStrengthData" border height="300" size="small">
               <el-table-column prop="ruleNumber" label="序号" width="80" />
-              <el-table-column prop="specEntityText" label="规范实体" />
+              <el-table-column prop="specEntityText" label="规范实体" width="100"/>
               <el-table-column prop="ifcGuid" label="IFC GUID" width="280" />
-              <el-table-column prop="ifcEntityWithType" label="实体类型" />
+              <el-table-column prop="ifcEntityWithType" label="实体类型" width="300"/>
+              <el-table-column prop="匹配原因" label="匹配原因" width="300"/>
             </el-table>
           </div>
         </el-collapse-transition>
@@ -277,12 +283,14 @@
           <div v-show="tableExpandStatus.ComplianceCheck" class="table-body">
             <el-table :data="ComplianceCheckData" border highlight-current-row height="400">
               <el-table-column prop="规则序号" label="规则序号" width="100" />
-              <el-table-column prop="组序号" label="组号" width="100"  />
-              <el-table-column prop="guid" label="GUID" width="300" />
-              <el-table-column label="审查结果">
+              <el-table-column prop="组序号" label="组号" width="80"  />
+              <el-table-column prop="IFC实体组" label="IFC实体组" width="300" />
+              <el-table-column prop="原始属性集" label="原始属性集" width="300" />
+              <el-table-column prop="analysis_process" label="分析原因" width="300" />
+              <el-table-column label="审查结果" width="100">
                 <template #default="{row}">
-                  <span :class="getStatusClass(row.judgement_results)" class="status-text">
-                    {{ row.judgement_results }}
+                  <span :class="getStatusClass(row.judgement_result)" class="status-text">
+                    {{ row.judgement_result }}
                   </span>
                 </template>
               </el-table-column>
@@ -379,19 +387,19 @@ const parseBackendData = (resData) => {
   }));
 
   EntitiesToRulesData.value = (outputs[5] || []).map(item => ({
-    规范条文: item[0], 实体: item[1]
+    规范内容:item[0],规范实体:item[1],规范实体类型:item[2],匹配IFC类型:item[3],匹配原因:item[4]
   }));
 
   entityStrengthFrontData.value = (outputs[6] || []).map(item => ({
-    ruleNumber: item[0], specEntityText: item[1], ifcGuid: item[2], ifcEntityWithType: item[3]
+    ruleNumber: item[0], specEntityText: item[1], ifcGuid: item[2], ifcEntityWithType: item[3],匹配原因:item[4]
   }));
 
   entityStrengthNewData.value = (outputs[7] || []).map(item => ({
-    ruleNumber: item[0], specEntityText: item[1], ifcGuid: item[2], ifcEntityWithType: item[3]
+    ruleNumber: item[0], specEntityText: item[1], ifcGuid: item[2], ifcEntityWithType: item[3],匹配原因:item[4]
   }));
 
   entityStrengthData.value = (outputs[8] || []).map(item => ({
-    ruleNumber: item[0], specEntityText: item[1], ifcGuid: item[2], ifcEntityWithType: item[3]
+    ruleNumber: item[0], specEntityText: item[1], ifcGuid: item[2], ifcEntityWithType: item[3],匹配原因:item[4]
   }));
 
   tupleSetData.value = (outputs[9] || []).map(item => {
@@ -410,7 +418,7 @@ const parseBackendData = (resData) => {
   }));
 
   ComplianceCheckData.value = (outputs[12] || []).map(item => ({
-    规则序号: item[0], 组序号: item[1], guid: item[2], judgement_results: item[3]
+    规则序号: item[0],组序号:item[1],IFC实体组:item[2],原始属性集:item[3],analysis_process:item[4],judgement_result:item[5]
   }));
 };
 

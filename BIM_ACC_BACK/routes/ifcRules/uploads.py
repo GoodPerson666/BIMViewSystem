@@ -6,7 +6,7 @@ upload_bp = Blueprint('upload', __name__)
 
 # 配置上传路径和允许的文件类型
 UPLOAD_FOLDER = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../..', 'uploads')
-ALLOWED_EXTENSIONS = {'pdf', 'doc', 'docx', 'txt', 'json'}
+ALLOWED_EXTENSIONS = {'pdf', 'doc', 'docx', 'txt', 'json','csv'}
 
 # 确保上传目录存在
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)

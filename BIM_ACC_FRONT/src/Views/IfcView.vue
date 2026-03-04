@@ -41,7 +41,6 @@
 
     <!--  规范条文面板  -->
     <IfcRules
-        @find-rules="handleFindRules"
         @view-databases="handleViewDatabases"
         @view-database-info="handleViewDatabaseInfo"
     />
@@ -125,6 +124,7 @@ const formattedRules = computed(() => {
   if (!Array.isArray(ifcRule.value)) return []
   return ifcRule.value.map(item => ({
     content: item?.内容 || '',
+    reason:item?.判断原因 || '',
     result: item?.判断结果 || '未知'
   }))
 })
@@ -192,15 +192,6 @@ async function handleClearColor() {
   await sceneRef.value.clearHighlight()
 }
 
-async function handleFindRules() {
-  try {
-    const {data} = await axios.post('http://localhost:5000/ifcView/findRules')
-    rawRules.value = data
-    isPopRulesVisible.value = true
-  } catch (e) {
-    console.error(e)
-  }
-}
 
 // 新增：处理查看数据库列表
 async function handleViewDatabases() {
@@ -237,6 +228,7 @@ async function fetchDatabaseInfo(dbName) {
     const {data} = await axios.get(`http://localhost:5000/rules/database/${dbName}`)
     if (data.status === 'success') {
       databaseInfo.value = data.data
+      console.log(data)
     } else {
       ElMessage.error(data.message || '获取数据库信息失败')
     }

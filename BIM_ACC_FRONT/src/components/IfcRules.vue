@@ -9,7 +9,7 @@
       <!-- 上传按钮 -->
       <el-upload
           class="upload-btn"
-          accept=".pdf,.doc,.docx,.txt,.json"
+          accept=".pdf,.csv,.doc,.docx,.txt,.json"
           :show-file-list="true"
           :auto-upload="true"
           :action="uploadUrl"
@@ -70,7 +70,7 @@ const uploadUrl = ref('http://localhost:5000/rules/uploads')
 // hover状态管理
 const isUploadHover = ref(false)
 const isAnalysisHover = ref(false)
-const isDatabaseHover = ref(false)  // 新增按钮的hover状态
+const isDatabaseHover = ref(false)
 
 // 上传错误处理
 function handleUploadError(error) {

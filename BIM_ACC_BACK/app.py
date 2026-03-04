@@ -4,7 +4,9 @@ from flask_cors import CORS  # 解决跨域问题
 # 导入 Blueprint
 from routes.check.CheckRusults import check_results_bp
 from routes.check.Check_details import check_details_bp
-from routes.ifcRules.analysis_rules import analysis_bp
+# from routes.ifcRules.analysis_rules import analysis_bp
+from routes.ifcRules.analysis_rules_csv import analysis_bp
+
 from routes.ifcRules.uploads import upload_bp
 from routes.ifcRules.Rule_route import getRules_bp
 from routes.ifcView.find_rules import findRules_bp
@@ -29,10 +31,12 @@ app.register_blueprint(findRules_bp)
 
 app.register_blueprint(upload_bp)
 app.register_blueprint(analysis_bp)
+# app.register_blueprint(analysis_csv_bp)
 
 app.register_blueprint(check_details_bp)
 # 合规性审查
 app.register_blueprint(check_results_bp)
+
 
 
 if __name__ == '__main__':

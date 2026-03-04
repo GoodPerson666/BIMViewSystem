@@ -3,21 +3,22 @@
   <el-dialog
       :model-value="isPopupVisible"
       title="构件详情"
-      width="500"
+      width="700"
       align-center
       @close="handleClose"
   >
-    <p><b>构件名称：</b>{{ ifcName }}</p>
-    <p><b>规范条文：</b></p>
+<!--    <p><b>构件名称：</b>{{ ifcName }}</p>-->
+<!--    <p><b>规范条文：</b></p>-->
 
     <el-table
         :data="formattedRules"
         border
         stripe
         style="width: 100%; margin-top: 10px"
-        max-height="300"
+        max-height="400"
     >
-      <el-table-column prop="content" label="条文内容" />
+      <el-table-column prop="content" label="条文内容" width="200"/>
+      <el-table-column prop="reason" label="判断原因" width="400" />
       <el-table-column prop="result" label="结果" width="100" />
     </el-table>
 
@@ -110,9 +111,20 @@
             width="55"
         />
 
-        <el-table-column prop="section_id" label="章节编号" width="100" />
-        <el-table-column prop="section_name" label="章节名称" width="200" />
-        <el-table-column prop="item_id" label="条款编号" width="120" />
+<!--        <el-table-column prop="section_id" label="章节编号" width="100" />-->
+<!--        <el-table-column prop="section_name" label="章节名称" width="200" />-->
+<!--        <el-table-column prop="item_id" label="条款编号" width="120" />-->
+<!--        <el-table-column-->
+<!--            prop="content"-->
+<!--            label="条款内容"-->
+<!--            :show-overflow-tooltip="true"-->
+<!--        />-->
+
+
+        <el-table-column prop="rule_id" label="规则序号" width="100" />
+        <el-table-column prop="source" label="规范来源" width="200" />
+        <el-table-column prop="clause_id" label="条款编号" width="120" />
+        <el-table-column prop="subclause_id" label="条款字句序号" width="120" />
         <el-table-column
             prop="content"
             label="条款内容"
@@ -192,7 +204,7 @@ const handleSearchDebounced = () => {
   }, 300)
 }
 
-// -------------------- 计算属性 --------------------
+
 // 原始数据库信息列表（空值保护）
 const databaseInfoList = computed(() => {
   return props.databaseInfo || []

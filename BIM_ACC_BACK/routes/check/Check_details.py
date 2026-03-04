@@ -46,7 +46,8 @@ def properties_set_results():
 # 第四部分：规范实体与条文对齐
 def entities_to_rules():
     conn = sqlite3.connect(r'instance/data.db')
-    sql = "SELECT 规范内容, GROUP_CONCAT(规范实体, ', ') AS 同一规范下的所有实体 FROM 结果_4_实体类型对齐 GROUP BY 规范内容 "
+    # sql = "SELECT 规范内容, GROUP_CONCAT(规范实体, ', ') AS 同一规范下的所有实体 FROM 结果_4_实体类型对齐 GROUP BY 规范内容 "
+    sql = "select 规范内容,规范实体,规范实体类型,匹配IFC类型,匹配原因 from 结果_4_实体类型对齐"
     rows = conn.execute(sql).fetchall()
     return rows
 
@@ -54,19 +55,19 @@ def entities_to_rules():
 # 第五部分：实体对齐
 def entity_strength_front_results():
     conn = sqlite3.connect(r'instance/data.db')
-    sql = "select 规则序号,规范实体文本,ifc_guid,ifc_entity_with_type from 结果_4_实体对齐_前"
+    sql = "select 规则序号,规范实体文本,ifc_guid,ifc_entity_with_type,匹配原因 from 结果_4_实体对齐_前"
     rows = conn.execute(sql).fetchall()
     return rows
 
 def entity_strength_new_results():
     conn = sqlite3.connect(r'instance/data.db')
-    sql = "select 规则序号,规范实体文本,ifc_guid,ifc_entity_with_type from 结果_4_实体对齐_新增 "
+    sql = "select 规则序号,规范实体文本,ifc_guid,ifc_entity_with_type,匹配原因  from 结果_4_实体对齐_新增 "
     rows = conn.execute(sql).fetchall()
     return rows
 
 def entity_strength_results():
     conn = sqlite3.connect(r'instance/data.db')
-    sql = "select 规则序号,规范实体文本,ifc_guid,ifc_entity_with_type from 结果_4_实体对齐 "
+    sql = "select 规则序号,规范实体文本,ifc_guid,ifc_entity_with_type,匹配原因  from 结果_4_实体对齐 "
     rows = conn.execute(sql).fetchall()
     return rows
 
@@ -91,20 +92,25 @@ def relate_entities_results():
     return rows
 
 # 第八部分：合规性审查
+# def compliance_check_results():
+#     list = []
+#     guid = []
+#     conn = sqlite3.connect(r'instance/data.db')
+#     sql = "select * from 结果_8_合规性审查 limit 100 "
+#     cursor = conn.execute(sql)
+#     rows = cursor.fetchall()
+#
+#     for row in rows:
+#         guid_json = json.loads(row[2])
+#         guid = guid_json[1]['guid']
+#         list.append((row[0], row[1], guid, row[5]))
+#     return list
+
 def compliance_check_results():
-    list = []
-    guid = []
     conn = sqlite3.connect(r'instance/data.db')
-    sql = "select * from 结果_8_合规性审查 limit 100 "
-    cursor = conn.execute(sql)
-    rows = cursor.fetchall()
-
-    for row in rows:
-        guid_json = json.loads(row[2])
-        guid = guid_json[1]['guid']
-        list.append((row[0], row[1], guid, row[5]))
-    return list
-
+    sql = "select 规则序号,组序号,IFC实体组,原始属性集,analysis_process,judgment_result from 结果_8_合规性审查"
+    rows = conn.execute(sql).fetchall()
+    return rows
 
 def check_details():
     outputs=[

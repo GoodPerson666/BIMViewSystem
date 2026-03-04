@@ -15,8 +15,9 @@ def getRules():
 
         sql = '''
                     SELECT
-              b.规范内容,
-              a.judgment_result
+              b.规范内容,     
+              a.judgment_result,
+              a.analysis_process
             FROM
               结果_8_合规性审查 a
             INNER JOIN
@@ -30,7 +31,7 @@ def getRules():
         rows = conn.execute(sql, (f'%{guid}%',)).fetchall()
         conn.close()
 
-        data = [{'内容': r[0], '判断结果': r[1]} for r in rows]
+        data = [{'内容': r[0], '判断原因':r[2],'判断结果': r[1]} for r in rows]
         return jsonify({'success': True, 'data': data})
     except Exception as e:
         return jsonify({'success': False, 'message': str(e)}), 500

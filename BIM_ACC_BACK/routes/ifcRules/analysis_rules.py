@@ -104,7 +104,6 @@ def create_tables(db_name):
         if conn:
             conn.close()
 
-
 def insert_data(db_name, data=None):
     """向指定SQLite数据库插入数据，从/insert_data目录下寻找同名JSON文件"""
     # 构建JSON文件路径
